@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap");
+
+.root {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 80%;
+  margin: 2rem 0rem;
+  background: #f2f3fa;
+  display: flex;
+}
+
+.wellBeing {
+  font-family: Playfair Display;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #414bc1;
+}
+.sectionFirst {
+  padding: 5rem 4rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionFirst h2 {
+  font-family: Playfair Display;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.sectionFirst p {
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #666563;
+}
+.sectionSecond {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #dedddd;
+  width: 70%;
+}
+
+.gridContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+  grid-template-rows: repeat(2, 1fr); /* Creates two rows */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border: 1px solid #dedddd;
+  gap: 1rem;
+  padding: 1rem;
+}
+.card p {
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+@media (max-width: 1440px) {
+  .sectionFirst {
+    padding: 5rem 1rem;
+  }
+}
+@media (max-width: 1240px) {
+  .container {
+    flex-direction: column;
+  }
+  .sectionFirst, .sectionSecond {
+    width: 100%;
+  }
+}
+
+@media (max-width: 586px) {
+  .sectionFirst {
+    padding: 2rem 1rem;
+  }
+  .container {
+    width: 100%;
+  }
+}

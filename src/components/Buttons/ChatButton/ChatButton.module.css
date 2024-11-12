@@ -1,0 +1,43 @@
+.chatButtonContainer {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 60px;
+  }
+  
+  /* Button itself */
+  .chatButton {
+    width: 100%;
+    height: 100%;
+    padding: 14px;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
+  
+  .chatButton:hover {
+    transform: translate(4%, 14.5%);
+  }
+  
+  /* Button border effect (under the button) */
+  .chatButtonContainer::after {
+    content: "";
+    position: absolute;
+    right:0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #a6abe2;
+    z-index: 0;
+    transform: translate(4%, 14.5%);
+  }
+  

@@ -1,0 +1,172 @@
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.container {
+  width: 60%;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tabButton {
+  width: 120px;
+  border: 1px solid #4a5bc1;
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #4a5bc1;
+  transition: background-color 0.3s, color 0.3s;
+  background: #ebecfc !important;
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.content h1 {
+  margin-bottom: 10px;
+  font-family: Playfair Display !important;
+  font-size: 66px;
+  font-weight: 400;
+  line-height: 74px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.highlight {
+  color: #4a5bc1; /* Highlight color */
+  font-style: italic;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #666563;
+  margin-top: 2rem;
+}
+
+.whatsappButton {
+  background-color: #4a5bc1;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.whatsappButton:hover {
+  background-color: #3a4ca1; /* Darker on hover */
+}
+
+.get_your_qoute {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #010fad;
+}
+
+.qoutecontainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 10rem;
+  width: 200px;
+  margin: auto;
+}
+.chatBtn {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+.bannerImage {
+  margin-top: -30rem;
+  height: 50rem;
+  width: 100%;
+  background-size: cover;
+  background-image: url('/banner.svg');
+  background-repeat: no-repeat;
+}
+
+.frameHolder {
+  display: flex;
+  z-index: 1;
+  justify-content: space-between;
+  width: 100%;
+  background: white;
+}
+.frameItem {
+  width: 33%;
+}
+
+@media (max-width: 1240px) {
+  .content h1 {
+    font-size: 48px; /* Adjust size for tablets */
+    line-height: 56px; /* Adjust line height */
+  }
+  .container {
+    width: 80%;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 0rem;
+    position: relative;
+  }
+}
+
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 36px; /* Adjust size for mobile */
+    line-height: 44px; /* Adjust line height */
+    margin-bottom: 8px; /* Optional adjustment */
+    word-break: break-all;
+  }
+  .container {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 0rem;
+    position: relative;
+  }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 468px) {
+  .content h1 {
+    font-size: 28px; /* Adjust size for mobile */
+    line-height: 26px; /* Adjust line height */
+    margin-bottom: 8px; /* Optional adjustment */
+  }
+}

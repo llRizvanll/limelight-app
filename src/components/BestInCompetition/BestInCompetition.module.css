@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap");
+
+.root {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.container {
+  text-align: center;
+  width: 80%;
+  margin: 10px 0px;
+  padding: 20px 0px;
+}
+
+.container {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.heading {
+  font-family: Playfair Display;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3b3a37;
+}
+.heading span {
+  font-family: Playfair Display;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #414bc1;
+}
+
+.comparisonTable {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  padding: 2rem;
+  border-bottom: 1px solid #dedddd;
+  width: 30%;
+}
+
+.header .cell {
+  font-weight: bold;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.row .cell:nth-child(2) {
+  background-color: #414bc112;
+}
+
+.title {
+  color: #666563;
+  font-weight: bold;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #666563;
+}
+
+.middleHeading {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700 !important;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #010fad;
+}
+
+@media (max-width: 780px) {
+  .container {
+    width: 100%;
+  }
+  .header .cell {
+    font-size: 14px;
+  }
+
+  .cell {
+    padding: 0.5rem;
+  }
+}

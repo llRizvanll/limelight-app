@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap");
+
+.root {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 80%;
+  margin: 2rem 0rem;
+  background: #f2f3fa;
+  display: flex;
+}
+.firstSection {
+  flex: 1;
+  background-image: url("/bestInclass.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 546px;
+}
+.titleHolder {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #a0a09f;
+}
+.secondSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  font-family: Playfair Display;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3b3a37;
+  width: 50%;
+  padding: 2rem 7rem;
+}
+
+.nanoCoating {
+  font-family: Playfair Display;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #414bc1;
+}
+
+.indicatorsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.indicators h3 {
+  font-family: Lato;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3b3a37;
+}
+.indicators p {
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #666563;
+}
+
+@media (max-width: 1640px) {
+  .secondSection {
+    padding: 2rem 2rem;
+  }
+  .indicators h3 {
+    font-size: 34px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    flex-direction: column;
+  }
+  .firstSection {
+    min-height: 20rem;
+  }
+  .secondSection {
+    padding: 2rem 2rem;
+    width: 100%;
+  }
+  .indicators h3 {
+    font-size: 34px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 586px) {
+  .container {
+    width: 100%;
+  }
+}
