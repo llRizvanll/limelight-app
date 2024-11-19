@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import ReactSimplyCarousel from "react-simply-carousel";
 import TestimonialCard from "./TestimonialCard";
@@ -7,6 +7,13 @@ import styles from "./Testimonials.module.css";
 
 export default function Testimonials() {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [initialized, setInitialized] = useState(false);
+
+  // Set initialized to true after the component mounts
+  useEffect(() => {
+    setInitialized(true);
+  }, []);
+
 
   return (
     <div className={styles.root}>
@@ -43,7 +50,7 @@ export default function Testimonials() {
           </div>
         </div>
         <div className={styles.wrapper}>
-          <ReactSimplyCarousel
+          {/* <ReactSimplyCarousel
             activeSlideIndex={activeSlideIndex}
             onRequestChange={setActiveSlideIndex}
             itemsToShow={2}
@@ -84,7 +91,60 @@ export default function Testimonials() {
                 />
               </div>
             ))}
-          </ReactSimplyCarousel>
+          </ReactSimplyCarousel> */}
+
+<ReactSimplyCarousel
+      activeSlideIndex={activeSlideIndex}
+      onRequestChange={setActiveSlideIndex}
+      itemsToShow={2}  // Always show 2 cards in the carousel
+      itemsToScroll={1}
+      forwardBtnProps={{
+        style: { display: "none" },
+        children: null,
+      }}
+      backwardBtnProps={{
+        style: { display: "none" },
+        children: null,
+      }}
+      responsiveProps={[
+        {
+          itemsToShow: 1,
+          itemsToScroll: 1,
+          maxWidth: 1080,
+        },
+      ]}
+      speed={400}
+      easing="linear"
+    >
+      {testimonials.map((testimonial, index) => {
+        const isActiveCard = index === activeSlideIndex;
+        const isNextCard = index === (activeSlideIndex + 1) % testimonials.length;
+
+
+        const cardClassNames = `transition-all ease-in-out duration-300 ${
+          isActiveCard ? 'opacity-100 h-[auto] scale-100' : ''
+        } ${
+          isNextCard
+            ? `transform scale-90 opacity-50 w-[30%] h-[40%] transition-transform duration-300 ease-in-out`
+            : ''
+        } ${!isActiveCard && !isNextCard ? 'opacity-100 h-[auto]' : ''}`;
+        
+        
+
+        return (
+          <div key={index} className={cardClassNames}>
+            <TestimonialCard
+              name={testimonial.name}
+              location={testimonial.location}
+              imageSrc={testimonial.image}
+              title={testimonial.title}
+              review={testimonial.review}
+            />
+          </div>
+        );
+      })}
+    </ReactSimplyCarousel>
+
         </div>
       </div>
     </div>

@@ -16,21 +16,27 @@ const WellBeing = () => {
             your loved ones and the planet without compromise.
           </p>
         </div>
-        <div className={styles.sectionSecond}>
+        <div className="flex justify-center items-center md:border-l md:border-[#dedddd] md:w-[70%] w-full">
           <div className={styles.gridContainer}>
-            <div className={styles.card}>
+            {/* <div className="flex flex-col items-center justify-center h-full border border-[#dedddd] gap-4 p-4"> */}
+            <div className="flex flex-col items-center justify-center h-full gap-4 p-4 border-b border-r border-[#dedddd] font-lato"
+            // border border-[#dedddd] border-t-0 border-b-0 gap-4 p-4 border-r-0 border-l-0"
+            >
               <img src="/leaf.svg" alt="Leaf" />
               <p>Organic</p>
             </div>
-            <div className={styles.card}>
+            <div className="flex flex-col items-center justify-center h-full gap-4 p-4 border-b border-[#dedddd] font-lato">
+            {/* <div className="flex flex-col items-center justify-center h-full border border-[#dedddd] border-t-0 border-b-0 gap-4 p-4"> */}
               <img src="/check.svg" alt="Premium" />
               <p>Premium</p>
             </div>
-            <div className={styles.card}>
+            <div className="flex flex-col items-center justify-center h-full gap-4 p-4 border-r border-[#dedddd] font-lato">
+            {/* <div className="flex flex-col items-center justify-center h-full border border-[#dedddd] border-b-0 gap-4 p-4"> */}
               <img src="/odourless.svg" alt="odourless" />
               <p>Odourless</p>
             </div>
-            <div className={styles.card}>
+            <div className="flex flex-col items-center justify-center h-full gap-4 p-4 font-lato">
+            {/* <div className="flex flex-col items-center justify-center h-full border border-[#dedddd] border-b-0 gap-4 p-4"> */}
               <img src="/safe.svg" alt="Safe" />
               <p>Safe</p>
             </div>

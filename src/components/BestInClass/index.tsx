@@ -18,11 +18,15 @@ const BestInclass = () => {
         <div className={styles.indicatorsContainer}>
           <div className={styles.indicators}>
             <h3>30+</h3>
-            <p>years of enhancing home interiors</p>
+            <p>
+              YEARS OF ENHANCING HOME INTERIORS
+            </p>
           </div>
           <div className={styles.indicators}>
             <h3>200</h3>
-            <p>home services delivered & counting</p>
+            <p>
+              HOME SERVICES DELIVERED & COUNTING
+            </p>
           </div>
         </div>
       </div>

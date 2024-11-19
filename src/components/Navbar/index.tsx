@@ -51,16 +51,23 @@ export default function NavBar() {
   };
 
   return (
-    <nav className={styles.nav}>
+    <nav 
+    // className={styles.nav }
+    className="flex items-center justify-between py-[32px] px-16"
+    >
       <div className={styles.logo}>
         <img src="/Logo-Blue.svg" alt="Logo" />
       </div>
 
       {/* Desktop Menu */}
-      <ul className={`${styles.menu} ${styles.desktopMenu}`}>
+      {/* <ul 
+      className={`${styles.menu} ${styles.desktopMenu}`}
+      // className="hidden md:flex items-center list-none gap-12 font-lato text-[18px] font-medium leading-6 tracking-[0.02em] text-left"
+
+       >
         <li>Nano coating</li>
         <li className={styles.dropdown}>
-          Services <IoChevronDownSharp className={styles.icon} />
+          Fitouts <IoChevronDownSharp className={styles.icon} />
           <ul className={styles.dropdownMenu}>
             <li>Service 1</li>
             <li>Service 2</li>
@@ -68,7 +75,23 @@ export default function NavBar() {
         </li>
         <li>About us</li>
         <li>FAQs</li>
-      </ul>
+      </ul> */}
+      <ul 
+  className="hidden md:flex items-center list-none gap-12 font-lato text-[18px] font-medium leading-6 tracking-[0.02em] text-left"
+>
+  <li className="relative cursor-pointer">Nano coating</li>
+  <li className="relative flex items-center cursor-pointer group">
+    Fitouts 
+    {/* <IoChevronDownSharp className="ml-[7px] mt-[2px]" />
+    <ul className="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-300 list-none py-2 min-w-[150px] font-lato text-[18px] font-medium leading-6 tracking-[0.02em] z-10 rounded-md shadow-lg">
+      <li className="px-5 py-2 hover:bg-gray-100 cursor-pointer">Service 1</li>
+      <li className="px-5 py-2 hover:bg-gray-100 cursor-pointer">Service 2</li>
+    </ul> */}
+  </li>
+  <li className="relative cursor-pointer">About us</li>
+  <li className="relative cursor-pointer">FAQs</li>
+</ul>
+
 
       {/* Mobile Menu Icon */}
       <div className={styles.hamburgerIcon} onClick={toggleDrawer}>

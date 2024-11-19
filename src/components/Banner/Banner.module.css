@@ -21,9 +21,9 @@
   gap: 1rem;
 }
 
+
 .tabButton {
   width: 120px;
-  border: 1px solid #4a5bc1;
   padding: 8px 16px;
   margin: 0 5px;
   cursor: pointer;
@@ -38,7 +38,57 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  position: relative; /* Required for pseudo-elements to position relative to this container */
+  box-sizing: content-box;
+  border: none; /* Remove the default border */
 }
+
+/* Top Border */
+.tabButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -6px; /* Extends the border 6px to the left */
+  width: calc(100% + 12px); /* Extends the width by 12px (6px on each side) */
+  height: 1px; /* Top border height */
+  background-color: #4a5bc1;
+}
+
+/* Bottom Border */
+.tabButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -6px; /* Extends the border 6px to the left */
+  width: calc(100% + 12px); /* Extends the width by 12px (6px on each side) */
+  height: 1px; /* Bottom border height */
+  background-color: #4a5bc1;
+}
+
+/* Left Border */
+.tabButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -6px; /* Extends the border 6px to the left */
+  width: 1px; /* Left border width */
+  background-color: #4a5bc1;
+}
+
+/* Right Border */
+.tabButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -6px; /* Extends the border 6px to the right */
+  width: 1px; /* Right border width */
+  background-color: #4a5bc1;
+}
+
+
+
 
 .content h1 {
   margin-bottom: 10px;

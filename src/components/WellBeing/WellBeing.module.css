@@ -9,7 +9,9 @@
 .container {
   width: 80%;
   margin: 2rem 0rem;
-  background: #f2f3fa;
+  /* background: #f2f3fa; */
+  background: #F4F4F5;
+
   display: flex;
 }
 
@@ -70,16 +72,6 @@
   grid-template-rows: repeat(2, 1fr); /* Creates two rows */
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  border: 1px solid #dedddd;
-  gap: 1rem;
-  padding: 1rem;
-}
 .card p {
   font-family: Lato;
   font-size: 20px;

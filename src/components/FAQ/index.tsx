@@ -5,7 +5,7 @@ import { RiCloseLargeLine } from "react-icons/ri";
 import styles from "./FAQs.module.css"; // Import the CSS module
 
 const FAQs = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
 
   const faqs = [
     {

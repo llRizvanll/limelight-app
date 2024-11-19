@@ -15,7 +15,7 @@ const ProtectionSection = () => {
           achieved with our state-of-the-art professionalism and advanced
           practices.
         </p>
-        <h3 className={styles.protectTitle}>Protect against:</h3>
+        <h3 className={styles.protectTitle}> PROTECT AGAINST:</h3>
         <div className={styles.protectList}>
           <div className={styles.protectItem}>
             <img

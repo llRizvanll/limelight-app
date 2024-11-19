@@ -26,7 +26,7 @@ export default function RootLayout({
             rel="stylesheet"
           />
       </Head>
-      <body
+      <body className="bg-[#F8F8FA]"
       >
         {children}
       </body>
