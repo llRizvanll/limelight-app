@@ -16,6 +16,8 @@ export default function Home() {
       <NavBar />
       <Banner />
       <BestInclass />
+      {/* <span className=" flex justify-center pb-7 border-b border-[#66656333] w-full"></span> */}
+
       <ProtectionSection />
       <WellBeing />
       <ProcessSteps />

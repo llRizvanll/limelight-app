@@ -26,7 +26,7 @@ const ProcessSteps = () => {
   ];
 
   return (
-    <div className={styles.root}>
+    <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
     <div className={styles.container}>
       <div className={styles.headingholder}>
         <h2>Utmost care and protection in just a</h2>

@@ -3,7 +3,12 @@
 .footer {
     background-color: #080F66;
     color: #ffffff;
-    padding: 2.3rem 6rem;
+    /* padding: 2.3rem 6rem; */
+    /* font-family: Lato; */
+     padding-bottom: 88px;
+      padding-top: 56px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
   
   .container {
@@ -13,6 +18,8 @@
     flex-wrap: wrap;
     margin-top: 3rem;
     margin-bottom: 8rem;
+   
+
   }
   
   .logoSection {

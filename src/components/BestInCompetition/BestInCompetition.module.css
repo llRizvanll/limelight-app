@@ -12,13 +12,15 @@
   width: 80%;
   margin: 10px 0px;
   padding: 20px 0px;
+  padding-top: 88px;
+  gap: 88px;
 }
 
 .container {
   display: flex;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  /* gap: 3rem; */
   align-items: center;
 }
 
@@ -52,6 +54,7 @@
   border-collapse: collapse;
   text-align: left;
   font-family: Arial, sans-serif;
+
 }
 
 .row {

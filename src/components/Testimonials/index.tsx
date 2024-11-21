@@ -16,8 +16,9 @@ export default function Testimonials() {
 
 
   return (
-    <div className={styles.root}>
-      <div className={styles.carouselContainer}>
+    <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
+      {/* <div className={styles.carouselContainer}> */}
+      <div className={`${styles.carouselContainer} '!pt-[88px] !mt-[88px] border-t border-[#66656333] w-full'`}>
         <div className={styles.header}>
           <h2 className={styles.heading}>
             People <span className={styles.highlight}>love</span> us for our
@@ -49,7 +50,7 @@ export default function Testimonials() {
             </div>
           </div>
         </div>
-        <div className={styles.wrapper}>
+        <div className={`${styles.wrapper} 'mt-[88px]'`}>
           {/* <ReactSimplyCarousel
             activeSlideIndex={activeSlideIndex}
             onRequestChange={setActiveSlideIndex}

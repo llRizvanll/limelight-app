@@ -3,8 +3,10 @@ import styles from "./ProtectionSection.module.css";
 
 const ProtectionSection = () => {
   return (
-    <div className={styles.root}>
-    <div className={styles.container}>
+    <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
+      
+      <div className={`${styles.container} 'mx-2 2xl:mx-32 !pt-[88px] !mt-[88px] border-t border-[#66656333] w-full'`}>
+      {/* <span className=" flex justify-center " /> */}
       <div className={styles.firstSection}>
         <h1>
           Retain the <span className={styles.highlight}>original appeal</span>{" "}

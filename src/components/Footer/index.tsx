@@ -5,7 +5,7 @@ import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+<footer className={`${styles.footer} font-lato`}>
       <div className={styles.container}>
         {/* Logo Section */}
         <div className={styles.logoSection}>
@@ -58,7 +58,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className={styles.bottomSection}>
+      <div 
+      className={`${styles.bottomSection} font-lato`}>
         <div className={styles.bottomSectionTextholder}>
           <p>Qudee maintenance & fitouts LLC 2024 ©</p>
           <p>All rights reserved</p>

@@ -4,7 +4,7 @@ import styles from "./SplitSofaSection.module.css";
 
 export default function SplitSofaSection() {
   return (
-    <div className={styles.root}>
+    <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
     <div className={styles.splitSofaRoot}>
       <div className={styles.splitSofa}>
         <div className={styles.textLeft}>

@@ -17,6 +17,9 @@ const config: Config = {
       fontFamily: {
         lato: ['Lato', 'sans-serif'],  // Add Lato font here
       },
+      screens: {
+        '2xl': '1920px', // Custom breakpoint for screens larger than 1920px
+      },
     },
   },
   plugins: [],

@@ -49,9 +49,9 @@ const FAQs = () => {
   };
 
   return (
-    <div className={styles.root}>
-      <div className={styles.container}>
-        <h2 className={styles.heading}>Frequently Asked Questions</h2>
+    <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
+      <div className={`${styles.container} '!pt-[88px] !mt-[88px] border-t border-[#66656333] w-full'`}>
+        <h2 className={styles.heading}>Frequently asked questions</h2>
         <div className={styles.faqList}>
           {faqs.map((faq, index) => (
             <div key={index} className={styles.faqItemContainer}>

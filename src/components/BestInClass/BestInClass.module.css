@@ -9,6 +9,7 @@
 .container {
   width: 80%;
   margin: 2rem 0rem;
+  margin-top: 106px;
   background: #f2f3fa;
   display: flex;
 }
@@ -17,18 +18,19 @@
   background-image: url("/bestInclass.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 546px;
+  /* min-height: 546px; 
+ min-width: 690px; */
 }
-.titleHolder {
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(102, 101, 99, 0.2);
-  
-}
+/* .titleHolder {
+  width: 398px;
+  height: 240px;
+} */
+
 .secondSection {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  gap: 28px;
   font-family: Playfair Display;
   font-size: 40px;
   font-weight: 500;
@@ -38,8 +40,12 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #3b3a37;
-  width: 50%;
-  padding: 2rem 7rem;
+  width: 45%;
+  padding-top: 72px;     
+  padding-bottom: 72px;  
+  padding-left: 46px;    
+  padding-right: 44px;
+  /* margin-left: 24px; */
 }
 
 .nanoCoating {
@@ -57,7 +63,12 @@
 
 .indicatorsContainer {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 44px;
+}
+
+.indicators {
+width: 177px;
 }
 .indicators h3 {
   font-family: Lato;
@@ -69,6 +80,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #3b3a37;
+  /* min-width: 177px; */
 }
 .indicators p {
   font-family: Lato;

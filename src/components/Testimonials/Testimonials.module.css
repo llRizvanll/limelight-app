@@ -7,6 +7,7 @@
   width: 80%;
   margin: 10px 0px;
   padding: 20px 0px;
+  padding-top: 88px;
 }
 .heading {
   font-family: Playfair Display;
@@ -97,7 +98,8 @@
 .header{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 80px;
+  /* padding-top: 80px; */
 }
 .backBtn{
   border: 1px solid #414BC1;

@@ -1,10 +1,17 @@
 .root {
   width: 100%;
+  max-width: 1800px; 
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+    display: flex;
+      /* flex-direction: column; */
+  justify-content: center;
 }
+
 .container {
   width: 60%;
   text-align: center;
@@ -16,7 +23,7 @@
 .tabs {
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 20px;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -119,7 +126,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #666563;
-  margin-top: 2rem;
+  margin-top: 40px;
 }
 
 .whatsappButton {
@@ -157,7 +164,7 @@
   margin: auto;
 }
 .chatBtn {
-  margin-top: 4rem;
+  margin-top: 50px;
   margin-bottom: 2rem;
 }
 .bannerImage {
@@ -169,7 +176,7 @@
   background-repeat: no-repeat;
 }
 
-.frameHolder {
+/* .frameHolder {
   display: flex;
   z-index: 1;
   justify-content: space-between;
@@ -178,7 +185,7 @@
 }
 .frameItem {
   width: 33%;
-}
+} */
 
 @media (max-width: 1240px) {
   .content h1 {
@@ -220,3 +227,52 @@
     margin-bottom: 8px; /* Optional adjustment */
   }
 }
+
+.frameHolder {
+  display: flex;
+  z-index: 1;
+  justify-content: space-between;
+  width: 100%;
+  background: white;
+}
+
+.frameItem {
+  width: 33%;
+}
+
+.videoThumbnail {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoPreview {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.playButton {
+  position: absolute;
+  color: white;
+  font-size: 48px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.playButton:hover {
+  transform: scale(1.1);
+}
+
+.modalVideo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+

@@ -3,8 +3,9 @@ import styles from "./BestInCompetition.module.css";
 
 const BestInCompetition = () => {
   return (
-    <div className={styles.root}>
-      <div className={styles.container}>
+    <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
+            <div className={`${styles.container} '!pt-[88px] !mt-[88px] border-t border-[#66656333] w-full'`}>
+      {/* <div className={styles.container}> */}
         <div>
           <h2 className={styles.heading}>
             We’re the <span>best </span> and <span>class apart </span>from
