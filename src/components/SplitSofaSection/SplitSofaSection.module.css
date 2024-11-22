@@ -71,12 +71,11 @@
   line-height: 64.33px;
   letter-spacing: 0.02em;
 }
-
 .splitSofaBottom {
   background: #414bc1;
   padding: 56px 102px 56px 102px;
   gap: 8px;
-  opacity: 0px;
+  /* opacity: 1; */
   display: flex;
   gap: 10;
 }
@@ -96,7 +95,7 @@
   width: 200px;
   padding: 14px 16px 14px 16px;
   gap: 20px;
-  opacity: 0px;
+  /* opacity: 1; */
   background: #f8f8fa;
   font-family: Lato;
   font-size: 18px;
