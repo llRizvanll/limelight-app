@@ -52,12 +52,26 @@ export default function NavBar() {
 
   return (
     <nav 
-    // className={styles.nav }
-    className="flex items-center justify-between py-[32px] px-16"
+    className="flex items-center justify-between my-[29px] mx-[24px] px-[20px] py-[14px] shadow-custom rounded-[12px]
+  md:my-0 md:mx-0 md:px-0 md:py-0 md:shadow-none md:pt-[32px] md:pr-[80px] md:pb-[24px] md:pl-[120px]"
+    // className="flex items-center justify-between my-[29px] mx-[24px] px-[20px] py-[14px] shadow-custom rounded-[12px]"
+
     >
-      <div className={styles.logo}>
-        <img src="/Logo-Blue.svg" alt="Logo" />
-      </div>
+    <div className={styles.logo}>
+  {/* <!-- Image for small screens (sm) --> */}
+  <img 
+    src="/mobileLogo.svg"
+    alt="Logo" 
+    className="block sm:hidden" 
+  />
+
+  {/* <!-- Image for medium (md) and large (lg) screens --> */}
+  <img 
+    src="/Logo-Blue.svg" 
+    alt="Logo" 
+    className="hidden sm:block md:block" 
+  />
+</div>
 
       {/* Desktop Menu */}
       {/* <ul 

@@ -21,10 +21,10 @@
 }
 
 
-.highlight {
+/* .highlight {
   color: #4a90e2;
   font-style: italic;
-}
+} */
 
 .card {
   background-color: #f9f9f9;
@@ -101,7 +101,7 @@
   margin-bottom: 80px;
   /* padding-top: 80px; */
 }
-.backBtn{
+/* .backBtn{
   border: 1px solid #414BC1;
   height: 64px;
   width: 64px;
@@ -118,7 +118,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 .arrowbtn{
   color: #414BC1;
 }
@@ -139,4 +139,23 @@
     width: 44px;
     height: 44px;
   }
+}
+@media (max-width: 460px) {
+.heading {
+   display: inline;
+  /* width: 40%; */
+  /* flex-direction: column; */
+  font-family: Playfair Display;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  
+}
+
+.carouselContainer {
+padding-top: 40px; }
 }

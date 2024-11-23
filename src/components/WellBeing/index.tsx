@@ -3,8 +3,9 @@ import styles from "./WellBeing.module.css";
 const WellBeing = () => {
   return (
     <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
-      <div className={styles.container}>
-        <div className={styles.sectionFirst}>
+     
+      <div className={`${styles.container} '!pb-[88px]'`}>
+        <div className={`${styles.sectionFirst} ''`}>
           <h2>
             We care for your{" "}
             <span className={styles.wellBeing}>Well Being </span> and the

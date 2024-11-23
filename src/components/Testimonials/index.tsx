@@ -19,10 +19,11 @@ export default function Testimonials() {
     <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
       {/* <div className={styles.carouselContainer}> */}
       <div className={`${styles.carouselContainer} '!pt-[88px] !mt-[88px] border-t border-[#66656333] w-full'`}>
-        <div className={styles.header}>
+        {/* <div className="flex flex-col md:flex-row lg:flex-row justify-between mb-[24px] md:mb-[80px] lg:mb-[80px] items-center ml-[25%] mr-[25%] md:ml-block md:mr-block lg:ml-block lg:mr-block"> */}
+        <div className="flex flex-col ml-[25%] mr-[25%] md:flex-row lg:flex-row justify-between mb-[24px] md:mb-[80px] lg:mb-[80px] items-center md:ml-0 md:mr-0 lg:ml-0 lg:mr-0">
+
           <h2 className={styles.heading}>
-            People <span className={styles.highlight}>love</span> us for our
-            services.
+            People <span className="text-[#414BC1] italic"> love </span> us for our services.
           </h2>
           <div
             style={{
@@ -34,7 +35,7 @@ export default function Testimonials() {
               onClick={() =>
                 setActiveSlideIndex((prev) => Math.max(prev - 1, 0))
               }
-              className={styles.backBtn}
+              className="border border-[#414BC1] h-[64px] w-[64px] rounded-full  justify-center items-center hidden sm:flex"
             >
               <IoIosArrowRoundBack size={32} className={styles.arrowbtn} />
             </div>
@@ -44,7 +45,7 @@ export default function Testimonials() {
                   Math.min(prev + 1, testimonials.length - 1)
                 )
               }
-              className={styles.forwardBtn}
+               className="border border-[#414BC1] h-[64px] w-[64px] rounded-full justify-center items-center hidden sm:flex"
             >
               <IoIosArrowRoundForward className={styles.arrowbtn} size={32} />
             </div>
@@ -157,48 +158,48 @@ const testimonials = [
     name: "Don Draper",
     location: "Palm Jumeirah, Dubai",
     image: "/user.svg",
-    title: "Absolutely Immaculate and professional service",
+    title: `“Absolutely Immaculate and professional service.”`,
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
   },
   {
     name: "Peggy Olson",
     location: "Bur Dubai, Dubai",
     image: "/user.svg",
-    title: "Absolutely Immaculate and professional service",
+    title: `“Absolutely Immaculate and professional service”`,
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
   },
   {
     name: "Peggy Olson",
     location: "Bur Dubai, Dubai",
     image: "/user.svg",
-    title: "Absolutely Immaculate and professional service",
+    title: `“Absolutely Immaculate and professional service”`,
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
   },
   {
     name: "Peggy Olson",
     location: "Bur Dubai, Dubai",
     image: "/user.svg",
-    title: "Absolutely Immaculate and professional service",
+    title: `“Absolutely Immaculate and professional service”`,
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
   },
   {
     name: "Peggy Olson",
     location: "Bur Dubai, Dubai",
     image: "/user.svg",
-    title: "Absolutely Immaculate and professional service",
+    title: `“Absolutely Immaculate and professional service”`,
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
   },
   {
     name: "Peggy Olson",
     location: "Bur Dubai, Dubai",
     image: "/user.svg",
-    title: "Absolutely Immaculate and professional service",
+    title: `“Absolutely Immaculate and professional service”`,
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
   },
 ];

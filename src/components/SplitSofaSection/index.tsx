@@ -8,10 +8,15 @@ export default function SplitSofaSection() {
     <div className={styles.splitSofaRoot}>
       <div className={styles.splitSofa}>
         <div className={styles.textLeft}>
-          <div>
+          {/* <div>
             <h2>From</h2>
             <h2>vulnerable to</h2>
-          </div>
+          </div> */}
+          <div className="font-playfair-display text-[22.88px] lg:text-[53.61px]  lg:leading-[64.33px] md:text-[53.61px]  md:leading-[64.33px] font-medium leading-[27.46px] tracking-[0.02em] text-left text-decoration-skip-ink-none">
+  <div>From</div>
+  <div>vulnerable to</div>
+</div>
+
         </div>
         <div className={styles.textRight}>
           <h2>spill resistant.</h2>

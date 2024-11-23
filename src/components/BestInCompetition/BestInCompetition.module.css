@@ -20,7 +20,7 @@
   display: flex;
   display: flex;
   flex-direction: column;
-  /* gap: 3rem; */
+  gap: 61px;
   align-items: center;
 }
 
@@ -54,7 +54,6 @@
   border-collapse: collapse;
   text-align: left;
   font-family: Arial, sans-serif;
-
 }
 
 .row {
@@ -66,6 +65,7 @@
   padding: 2rem;
   border-bottom: 1px solid #dedddd;
   width: 30%;
+  text-align: center;
 }
 
 .header .cell {
@@ -75,9 +75,10 @@
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.02em;
-  text-align: left;
+  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  text-align: center;
 }
 .row .cell:nth-child(2) {
   background-color: #414bc112;
@@ -115,9 +116,18 @@
   }
   .header .cell {
     font-size: 14px;
+    text-align: center;
   }
 
   .cell {
     padding: 0.5rem;
   }
 }
+@media (max-width: 460px) {
+  .cell {
+    width: 20%;
+    padding: 24px;
+  }
+}
+
+

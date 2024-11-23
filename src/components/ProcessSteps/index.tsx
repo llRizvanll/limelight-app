@@ -26,8 +26,10 @@ const ProcessSteps = () => {
   ];
 
   return (
+
     <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
-    <div className={styles.container}>
+      <div className={`${styles.container} '!pt-[88px] !mt-[88px]'`}>
+    {/* <div className={styles.container}> */}
       <div className={styles.headingholder}>
         <h2>Utmost care and protection in just a</h2>
         <h3>simple steps.</h3>
@@ -70,6 +72,8 @@ const ProcessSteps = () => {
           </p>
         </div>
       </div>
+
+      
       <div className={styles.stepFooter}>
 
       <h5 className={styles.bottomTitle}>Take a step towards elevating the durability of your furnishings.</h5>
@@ -86,7 +90,9 @@ const ProcessSteps = () => {
         </React.Fragment>
       ))} */}
     </div>
+
     </div>
+
   );
 };
 
