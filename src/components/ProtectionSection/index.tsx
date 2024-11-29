@@ -1,7 +1,34 @@
 import React from "react";
 import styles from "./ProtectionSection.module.css";
+import SecondSectionContainer from "./SectionCard";
+
 
 const ProtectionSection = () => {
+
+  const sectionData = [
+    {
+      imageSrc: "/hand.svg",
+      altText: "Pet incurred spills",
+      heading: "Healthier living spaces",
+      content:
+        "Our coatings create an invisible barrier that repels dust, allergens, and pollutants, contributing to a cleaner and healthier home.",
+    },
+    {
+      imageSrc: "/longlasting.svg",
+      altText: "Pet incurred spills",
+      heading: "Long lasting protection",
+      content:
+        "Nano coatings shield your furniture and surfaces from daily wear, stains, and spills, ensuring they stay pristine for years.",
+    },
+    {
+      imageSrc: "/peace.svg",
+      altText: "Pet incurred spills",
+      heading: "Peace of mind",
+      content:
+        "Say goodbye to constant cleaning. Nano coating reduces dirt build-up, making your surfaces easier to maintain with minimal effort.",
+    },
+  ];
+
   return (
     <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
       
@@ -49,7 +76,22 @@ const ProtectionSection = () => {
         </div>
       </div>
       <div className={styles.secondSection}>
-        <div className={styles.secondSectionContainer}>
+
+      {/* <div className={styles.secondSection}> */}
+      {sectionData.map((item:any, index:any) => (
+        <SecondSectionContainer
+          key={index}
+          imageSrc={item.imageSrc}
+          altText={item.altText}
+          heading={item.heading}
+          content={item.content}
+        />
+      ))}
+
+
+    {/* </div> */}
+
+        {/* <div className={styles.secondSectionContainer}>
           <div className={styles.imageContainer}>
             <img
               src="/hand.svg"
@@ -66,6 +108,7 @@ const ProtectionSection = () => {
             </p>
           </div>
         </div>
+
         <div className={styles.secondSectionContainer}>
           <div className={styles.imageContainer}>
             <img
@@ -99,7 +142,7 @@ const ProtectionSection = () => {
               effort.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
     </div>

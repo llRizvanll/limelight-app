@@ -19,7 +19,7 @@ export default function Home() {
       {/* <span className=" flex justify-center pb-7 border-b border-[#66656333] w-full"></span> */}
 
       <ProtectionSection />
-      <WellBeing />
+      {/* <WellBeing /> */}
       <ProcessSteps />
            {/* <span className=" flex justify-center pb-7 border-b border-[#66656333] w-full"></span> */}
       <BestInCompetition />

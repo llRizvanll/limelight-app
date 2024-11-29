@@ -56,9 +56,6 @@
   justify-content: space-between;
 }
 
-.question:hover {
-  color: #0070f3;
-}
 
 .answer {
   font-family: Lato;

@@ -133,7 +133,9 @@
 /* Tablet and Mobile View */
 @media (max-width: 768px) {
   .nav {
-    padding: 10px 2rem;
+    /* padding: 10px 2rem; */
+    padding: 14px 20px; 
+    background-color: white;
   }
 
   /* Hide desktop menu */
@@ -145,4 +147,138 @@
   .hamburgerIcon {
     display: block;
   }
+  
+  .hamburgerIconClose {
+    display: block;
+    cursor: pointer;
+    position: absolute; /* Make it absolute so it appears over the content */
+    top: 25px; /* Adjust the positioning as needed */
+    right: 25px; /* Adjust the positioning as needed */
+    z-index: 1000; /* Ensure it appears above the slider */
+  }
+  
 }
+/* .navbar {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 14px 20px;
+  margin: 0;
+
+  box-sizing: border-box; 
+} */
+/* Navbar.module.css */
+/* .navbar {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: white; 
+} */
+
+.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+
+
+
+/* General navbar styles */
+/* .navbar {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; 
+  width: 100%; 
+  z-index: 999;
+  background-color: white;
+  padding: 14px 20px; 
+  box-sizing: border-box; 
+} */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  z-index: 999;
+  background-color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  /* padding: 14px 20px;  */
+  box-sizing: border-box; 
+}
+
+/* Make navbar visible and hidden using translateY */
+.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Navbar styles for mobile */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px; /* Maintain consistent padding */
+  }
+
+  .navbar .hamburgerIcon {
+    display: block; /* Display the hamburger icon on mobile */
+  }
+
+  /* Make sure logo size is adjusted for smaller screens */
+  .navbar .logo img {
+    width: auto; /* Ensure logo is sized appropriately */
+  }
+
+  /* Adjust mobile menu */
+  .navbar .mobileMenu {
+    padding: 0 10px; /* Ensure no additional padding is added in mobile */
+  }
+}
+/* md:pt-[32px] md:pr-[80px] md:pb-[24px] md:pl-[120px] */
+/* Navbar styles for medium screens (md) and above */
+@media (min-width: 768px) {
+  .navbar {
+    /* padding: 14px 32px;  */
+    padding-top: 32px !important;
+    padding-right: 80px !important;
+    padding-bottom: 24px !important;
+    padding-left: 120px !important;
+    /* padding */
+  }
+
+  /* Display the main menu on medium and larger screens */
+  .navbar .desktopMenu {
+    display: flex;
+  }
+
+  /* Hide mobile-specific elements like hamburger icon on md and above */
+  .navbar .hamburgerIcon {
+    display: none;
+  }
+}
+
+/* Navbar styles for large screens (lg) */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 14px 40px; /* Adjust padding for larger screens */
+  }
+}
+
+

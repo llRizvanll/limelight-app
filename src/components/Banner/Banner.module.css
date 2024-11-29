@@ -234,6 +234,10 @@
   }
 }
 
+.tabs {
+  gap: 12px;
+}
+
 /* .frameHolder {
   display: flex;
   z-index: 1;
