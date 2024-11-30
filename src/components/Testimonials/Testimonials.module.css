@@ -162,4 +162,39 @@
 
 .carouselContainer {
 padding-top: 40px; }
+
+.splitSofaBottom {
+  padding: 26px 22px 26px 22px;
+  display: flex;
+  flex-direction: column;
+  height: 264px;
+}
+
+.splitSofaBottom h3 {
+  font-size: 20px;
+font-weight: 500;
+line-height: 32px;
+margin-bottom: 48px;
+}
+}
+
+.splitSofaBottom {
+  background: #414bc1;
+  height:244px;
+  padding: 56px 102px 56px 102px;
+  /* gap: 8px; */
+  /* opacity: 0px; */
+  display: flex;
+  gap: 10;
+
+}
+
+.splitSofaBottom h3 {
+  font-family: Lato;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #ffffff;
 }

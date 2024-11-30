@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import styles from "./ProtectionSection.module.css";
 import SecondSectionContainer from "./SectionCard";

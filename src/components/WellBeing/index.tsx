@@ -1,3 +1,4 @@
+'use client';
 import styles from "./WellBeing.module.css";
 
 const WellBeing = () => {

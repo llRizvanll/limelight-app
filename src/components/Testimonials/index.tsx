@@ -4,11 +4,19 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import ReactSimplyCarousel from "react-simply-carousel";
 import TestimonialCard from "./TestimonialCard";
 import styles from "./Testimonials.module.css";
+import ChatButton from "../Buttons/ChatButton";
+interface Testimonial {
+  name?: boolean;
+}
 
-export default function Testimonials() {
+const Testimonials: React.FC<Testimonial> = ({ name }) => {
+
+
+
+  
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [initialized, setInitialized] = useState(false);
-
+const fitouts = true
   // Set initialized to true after the component mounts
   useEffect(() => {
     setInitialized(true);
@@ -42,7 +50,7 @@ export default function Testimonials() {
             <div
               onClick={() =>
                 setActiveSlideIndex((prev) =>
-                  Math.min(prev + 1, testimonials.length - 1)
+                  Math.min(prev + 1, testimonialsData.length - 1)
                 )
               }
                className="border border-[#414BC1] h-[64px] w-[64px] rounded-full justify-center items-center hidden sm:flex"
@@ -52,48 +60,7 @@ export default function Testimonials() {
           </div>
         </div>
         <div className={`${styles.wrapper} 'mt-[88px]'`}>
-          {/* <ReactSimplyCarousel
-            activeSlideIndex={activeSlideIndex}
-            onRequestChange={setActiveSlideIndex}
-            itemsToShow={2}
-            itemsToScroll={2}
-            forwardBtnProps={{
-              style: { display: "none" },
-              children: null,
-            }}
-            backwardBtnProps={{
-              style: { display: "none" },
-              children: null,
-            }}
-            responsiveProps={[
-              {
-                itemsToShow: 1,
-                itemsToScroll: 1,
-                maxWidth: 1080,
-
-              },
-              {
-                itemsToShow: 2,
-                itemsToScroll: 2,
-                minWidth: 768,
-
-              },
-            ]}
-            speed={400}
-            easing="linear"
-          >
-            {testimonials.map((testimonial, index) => (
-              <div key={index}>
-                <TestimonialCard
-                  name={testimonial.name}
-                  location={testimonial.location}
-                  imageSrc={testimonial.image}
-                  title={testimonial.title}
-                  review={testimonial.review}
-                />
-              </div>
-            ))}
-          </ReactSimplyCarousel> */}
+  
 
 <ReactSimplyCarousel
       activeSlideIndex={activeSlideIndex}
@@ -118,9 +85,9 @@ export default function Testimonials() {
       speed={400}
       easing="linear"
     >
-      {testimonials.map((testimonial, index) => {
+      {testimonialsData.map((item, index) => {
         const isActiveCard = index === activeSlideIndex;
-        const isNextCard = index === (activeSlideIndex + 1) % testimonials.length;
+        const isNextCard = index === (activeSlideIndex + 1) % testimonialsData.length;
 
 
         const cardClassNames = `transition-all ease-in-out duration-300 ${
@@ -136,24 +103,44 @@ export default function Testimonials() {
         return (
           <div key={index} className={cardClassNames}>
             <TestimonialCard
-              name={testimonial.name}
-              location={testimonial.location}
-              imageSrc={testimonial.image}
-              title={testimonial.title}
-              review={testimonial.review}
+              name={item.name}
+              location={item.location}
+              imageSrc={item.image}
+              title={item.title}
+              review={item.review}
             />
           </div>
         );
       })}
     </ReactSimplyCarousel>
 
+
+   
+
         </div>
+
+        {name &&
+        <div className={styles.splitSofaBottom}>
+        <h3>
+          Make your furnishing stain resistant and long lasting. See the
+          difference everyday.
+        </h3>
+        <ChatButton color="text-custom-blue" hoverolor='hover:bg-light-silver' bgColor="bg-light-silver" />
+      </div>}
+
+
+
+
+
       </div>
+     
     </div>
   );
 }
 
-const testimonials = [
+export default Testimonials;
+
+export const testimonialsData = [
   {
     name: "Don Draper",
     location: "Palm Jumeirah, Dubai",
