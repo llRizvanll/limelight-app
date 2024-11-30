@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap");
 .root {
   display: flex;
   justify-content: center;
@@ -78,11 +78,13 @@
 
 .splitSofaBottom {
   background: #414bc1;
+  height:244px;
   padding: 56px 102px 56px 102px;
-  gap: 8px;
+  /* gap: 8px; */
   /* opacity: 0px; */
   display: flex;
   gap: 10;
+
 }
 
 .splitSofaBottom h3 {
@@ -168,11 +170,14 @@
     padding: 26px 22px 26px 22px;
     display: flex;
     flex-direction: column;
+    height: 264px;
   }
 
   .splitSofaBottom h3 {
-    font-size: 1rem;
-    letter-spacing: 0.01em;
+    font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 48px;
   }
 
   .splitSofa {
@@ -184,6 +189,8 @@
     margin-left: 1rem;
     margin-top: 4rem;
   }
+
+
 
   /* .textLeft {
     width: 50%;

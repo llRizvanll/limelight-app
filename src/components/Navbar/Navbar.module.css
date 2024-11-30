@@ -1,12 +1,14 @@
 /* components/NavBar.module.css */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap");
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 4rem;
-  /* background-color: #f8f8f8; */
+  /* background-color: #1d1d46 !important; */
 }
 
 .logo img {
@@ -193,28 +195,13 @@
 
 
 
-
-/* General navbar styles */
-/* .navbar {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0; 
-  width: 100%; 
-  z-index: 999;
-  background-color: white;
-  padding: 14px 20px; 
-  box-sizing: border-box; 
-} */
-
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right:0;
   z-index: 999;
-  background-color: white;
+  background-color: #F8F8FA;
   transition: transform 0.3s ease, opacity 0.3s ease;
   /* padding: 14px 20px;  */
   box-sizing: border-box; 

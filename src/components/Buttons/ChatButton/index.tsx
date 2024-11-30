@@ -17,7 +17,7 @@ const ChatButton = ({ color, bgColor, hoverolor }: IProps) => {
     <div className={styles.chatButtonContainer}>
       <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
         <button
-          className={`${styles.chatButton} ${color} ${bgColor || 'bg-custom-blue'} ${hoverolor ||  'hover:bg-black'}`}
+          className={`${styles.chatButton} ${color} ${bgColor || 'bg-custom-blue'} ${hoverolor ||  'hover:bg-black'} ${hoverolor  ? 'p-0' : 'p-[14px]'}`}
           style={{
             backgroundColor: bgColor, // Inline style for bgColor if needed
           }}

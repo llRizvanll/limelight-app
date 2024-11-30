@@ -31,8 +31,9 @@ const ProcessSteps = () => {
       <div className={`${styles.container} '!pt-[88px] !mt-[88px]'`}>
     {/* <div className={styles.container}> */}
       <div className={styles.headingholder}>
-        <h2>Utmost care and protection in just a</h2>
-        <h3>simple steps.</h3>
+       <div className={styles.containerh2} >Utmost care and protection in just a <span className={styles.containerh3}>simple steps.</span> </div>
+        {/* <h2>Utmost care and protection in just a</h2>
+        <h3>simple steps.</h3> */}
       </div>
       <div className={styles.stepsContainer}>
         <div className={styles.stepCard}>
