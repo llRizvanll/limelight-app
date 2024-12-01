@@ -1,0 +1,276 @@
+.root {
+    width: 100%;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: relative; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    margin-bottom: -200px;
+  }
+  
+  .container {
+    width: 60%;
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 2rem;
+    position: relative;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  
+  .tabButton {
+    width: 120px;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #4a5bc1;
+    transition: background-color 0.3s, color 0.3s;
+    background: #ebecfc !important;
+    font-family: Lato;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    position: relative;
+    /* Required for pseudo-elements to position relative to this container */
+    box-sizing: content-box;
+    border: none;
+    /* Remove the default border */
+  }
+  
+  /* Top Border */
+  .tabButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -6px;
+    /* Extends the border 6px to the left */
+    width: calc(100% + 12px);
+    /* Extends the width by 12px (6px on each side) */
+    height: 1px;
+    /* Top border height */
+    background-color: #4a5bc1;
+  }
+  
+  /* Bottom Border */
+  .tabButton::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -6px;
+    /* Extends the border 6px to the left */
+    width: calc(100% + 12px);
+    /* Extends the width by 12px (6px on each side) */
+    height: 1px;
+    /* Bottom border height */
+    background-color: #4a5bc1;
+  }
+  
+  /* Left Border */
+  .tabButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -6px;
+    /* Extends the border 6px to the left */
+    width: 1px;
+    /* Left border width */
+    background-color: #4a5bc1;
+  }
+  
+  /* Right Border */
+  .tabButton::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -6px;
+    /* Extends the border 6px to the right */
+    width: 1px;
+    /* Right border width */
+    background-color: #4a5bc1;
+  }
+  
+  
+  
+  
+  .content h1 {
+    margin-bottom: 10px;
+    font-family: Playfair Display !important;
+    font-size: 66px;
+    font-weight: 400;
+    line-height: 74px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #3B3A37;
+  }
+  
+  .highlight {
+    color: #4a5bc1;
+    /* Highlight color */
+    font-style: italic;
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #666563;
+    margin-top: 40px;
+    /* width:60%; */
+  
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  
+  .whatsappButton {
+    background-color: #4a5bc1;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .whatsappButton:hover {
+    background-color: #3a4ca1;
+    /* Darker on hover */
+  }
+  
+  .get_your_qoute {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #010fad;
+  }
+  
+  .qoutecontainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 10rem;
+    width: 200px;
+    margin: auto;
+  }
+  
+  .chatBtn {
+    margin-top: 50px;
+    margin-bottom: 2rem;
+  }
+  
+  .bannerImage {
+    /* margin-top: -30rem; */
+    height: 50rem;
+    width: 100%;
+    background-size: cover;
+    background-image: url('/aboutheader.png');
+    background-repeat: no-repeat;
+  }
+  
+  /* .frameHolder {
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+    width: 100%;
+    background: white;
+  }
+  .frameItem {
+    width: 33%;
+  } */
+  
+  @media (max-width: 1240px) {
+    .content h1 {
+      font-size: 48px;
+      /* Adjust size for tablets */
+      line-height: 56px;
+      /* Adjust line height */
+    }
+  
+    .container {
+      width: 80%;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 0rem;
+      position: relative;
+    }
+  }
+  
+  
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    .content h1 {
+      font-size: 36px;
+      /* Adjust size for mobile */
+      line-height: 44px;
+      /* Adjust line height */
+      margin-bottom: 8px;
+      /* Optional adjustment */
+      word-break: break-all;
+    }
+  
+    .container {
+      width: 100%;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 0rem;
+      position: relative;
+    }
+  }
+  
+  /* Mobile view adjustments */
+  @media (max-width: 468px) {
+  
+    .content h1 {
+      font-size: 32px;
+      /* Adjust size for mobile */
+      line-height: 38px;
+      /* Adjust line height */
+      margin-bottom: 8px;
+      /* Optional adjustment */
+    }
+  
+    .description {
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 16px;
+      /* Adjust size for mobile */
+      line-height: 24px;
+      /* Adjust line height */
+    }
+  }
+  
+  .tabs {
+    gap: 12px;
+  }
+  

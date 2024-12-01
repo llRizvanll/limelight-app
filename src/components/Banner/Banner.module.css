@@ -1,14 +1,14 @@
 .root {
   width: 100%;
-  max-width: 1800px; 
+  max-width: 1800px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-    display: flex;
-      /* flex-direction: column; */
+  display: flex;
+  /* flex-direction: column; */
   justify-content: center;
 }
 
@@ -45,9 +45,11 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  position: relative; /* Required for pseudo-elements to position relative to this container */
+  position: relative;
+  /* Required for pseudo-elements to position relative to this container */
   box-sizing: content-box;
-  border: none; /* Remove the default border */
+  border: none;
+  /* Remove the default border */
 }
 
 /* Top Border */
@@ -55,9 +57,12 @@
   content: '';
   position: absolute;
   top: 0;
-  left: -6px; /* Extends the border 6px to the left */
-  width: calc(100% + 12px); /* Extends the width by 12px (6px on each side) */
-  height: 1px; /* Top border height */
+  left: -6px;
+  /* Extends the border 6px to the left */
+  width: calc(100% + 12px);
+  /* Extends the width by 12px (6px on each side) */
+  height: 1px;
+  /* Top border height */
   background-color: #4a5bc1;
 }
 
@@ -66,9 +71,12 @@
   content: '';
   position: absolute;
   bottom: 0;
-  left: -6px; /* Extends the border 6px to the left */
-  width: calc(100% + 12px); /* Extends the width by 12px (6px on each side) */
-  height: 1px; /* Bottom border height */
+  left: -6px;
+  /* Extends the border 6px to the left */
+  width: calc(100% + 12px);
+  /* Extends the width by 12px (6px on each side) */
+  height: 1px;
+  /* Bottom border height */
   background-color: #4a5bc1;
 }
 
@@ -78,8 +86,10 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -6px; /* Extends the border 6px to the left */
-  width: 1px; /* Left border width */
+  left: -6px;
+  /* Extends the border 6px to the left */
+  width: 1px;
+  /* Left border width */
   background-color: #4a5bc1;
 }
 
@@ -89,8 +99,10 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  right: -6px; /* Extends the border 6px to the right */
-  width: 1px; /* Right border width */
+  right: -6px;
+  /* Extends the border 6px to the right */
+  width: 1px;
+  /* Right border width */
   background-color: #4a5bc1;
 }
 
@@ -107,10 +119,12 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  color: #3B3A37;
 }
 
 .highlight {
-  color: #4a5bc1; /* Highlight color */
+  color: #4a5bc1;
+  /* Highlight color */
   font-style: italic;
 }
 
@@ -127,6 +141,10 @@
   text-decoration-skip-ink: none;
   color: #666563;
   margin-top: 40px;
+  /* width:60%; */
+
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .whatsappButton {
@@ -141,7 +159,8 @@
 }
 
 .whatsappButton:hover {
-  background-color: #3a4ca1; /* Darker on hover */
+  background-color: #3a4ca1;
+  /* Darker on hover */
 }
 
 .get_your_qoute {
@@ -163,10 +182,12 @@
   width: 200px;
   margin: auto;
 }
+
 .chatBtn {
   margin-top: 50px;
   margin-bottom: 2rem;
 }
+
 .bannerImage {
   margin-top: -30rem;
   height: 50rem;
@@ -189,9 +210,12 @@
 
 @media (max-width: 1240px) {
   .content h1 {
-    font-size: 48px; /* Adjust size for tablets */
-    line-height: 56px; /* Adjust line height */
+    font-size: 48px;
+    /* Adjust size for tablets */
+    line-height: 56px;
+    /* Adjust line height */
   }
+
   .container {
     width: 80%;
     text-align: center;
@@ -205,11 +229,15 @@
 /* Mobile view adjustments */
 @media (max-width: 768px) {
   .content h1 {
-    font-size: 36px; /* Adjust size for mobile */
-    line-height: 44px; /* Adjust line height */
-    margin-bottom: 8px; /* Optional adjustment */
+    font-size: 36px;
+    /* Adjust size for mobile */
+    line-height: 44px;
+    /* Adjust line height */
+    margin-bottom: 8px;
+    /* Optional adjustment */
     word-break: break-all;
   }
+
   .container {
     width: 100%;
     text-align: center;
@@ -221,14 +249,31 @@
 
 /* Mobile view adjustments */
 @media (max-width: 468px) {
+
   .content h1 {
-    font-size: 28px; /* Adjust size for mobile */
-    line-height: 26px; /* Adjust line height */
-    margin-bottom: 8px; /* Optional adjustment */
+    font-size: 32px;
+    /* Adjust size for mobile */
+    line-height: 38px;
+    /* Adjust line height */
+    margin-bottom: 8px;
+    /* Optional adjustment */
+  }
+
+  .description {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 16px;
+    /* Adjust size for mobile */
+    line-height: 24px;
+    /* Adjust line height */
   }
 }
 
-.frameHolder {
+.tabs {
+  gap: 12px;
+}
+
+/* .frameHolder {
   display: flex;
   z-index: 1;
   justify-content: space-between;
@@ -238,7 +283,7 @@
 
 .frameItem {
   width: 33%;
-}
+} */
 
 .videoThumbnail {
   position: relative;
@@ -250,7 +295,7 @@
 .videoPreview {
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   object-fit: cover;
   filter: brightness(50%);
 }
@@ -273,6 +318,3 @@
   height: auto;
   border-radius: 8px;
 }
-
-
-

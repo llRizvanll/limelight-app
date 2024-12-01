@@ -1,5 +1,5 @@
 // components/Banner.js
-"use client" 
+"use client"
 import React, { useState } from "react";
 import styles from "./Banner.module.css";
 import ChatButton from "../Buttons/ChatButton";
@@ -7,8 +7,7 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { FaPlay } from "react-icons/fa";
 // import Modal from "react-modal";
 import Modal from "react-modal";
-
-Modal.setAppElement("#__next"); 
+Modal.setAppElement("#__next");
 
 
 
@@ -29,9 +28,62 @@ const Banner = () => {
     setIsModalOpen(false);
     setIsVideoPlaying(false); // Stop video playback when modal closes
   };
+
+  const playFullscreenVideo = () => {
+    // Create video element
+    const videoElement = document.createElement("video");
+    videoElement.src = "./screen.mp4";
+    videoElement.controls = true;
+    videoElement.autoplay = true;
+    videoElement.style.position = "fixed";
+    videoElement.style.top = "0";
+    videoElement.style.left = "0";
+    videoElement.style.width = "100%";
+    videoElement.style.height = "100%";
+    videoElement.style.zIndex = "1000";
+    videoElement.style.backgroundColor = "black";
+  
+    // Create close button
+    const closeButton = document.createElement("button");
+    closeButton.innerHTML = "✕";
+    closeButton.style.position = "fixed";
+    closeButton.style.top = "10px";
+    closeButton.style.right = "10px";
+    closeButton.style.zIndex = "1100";
+    closeButton.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+    closeButton.style.color = "white";
+    closeButton.style.border = "none";
+    closeButton.style.padding = "10px";
+    closeButton.style.borderRadius = "50%";
+    closeButton.style.fontSize = "24px";
+    closeButton.style.cursor = "pointer";
+  
+    // Append video and close button to body
+    document.body.appendChild(videoElement);
+    document.body.appendChild(closeButton);
+  
+    // Function to cleanup
+    const cleanup = () => {
+      document.removeEventListener("keydown", handleKeyPress);
+      videoElement.pause();
+      videoElement.remove();
+      closeButton.remove();
+    };
+  
+    // Event listener to close on Escape key
+    const handleKeyPress = (event:any) => {
+      if (event.key === "Escape") cleanup();
+    };
+  
+    // Add event listeners
+    closeButton.addEventListener("click", cleanup);
+    document.addEventListener("keydown", handleKeyPress);
+  };
+  
+  
   return (
     <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
-      <div className="container mx-auto text-center px-4 py-8 mt-0 relative sm:w-full md:w-4/5">
+      <div className="container mx-auto text-center px-4 py-8 mt-[130px] relative sm:w-full md:w-4/5 grid gap-[32px]">
         <div
           className={styles.tabs}
         >
@@ -51,101 +103,109 @@ const Banner = () => {
         <div className={styles.content}>
           <h1 className="font-playfair-display">
             Elegant furniture,
-          <span className="block">effortlessly
-            
-            <span className="text-[#4a5bc1] italic font-medium"> preserved</span> for
-            life.</span>
+            <span className="block">effortlessly
+
+              <span className="text-[#4a5bc1] italic font-medium"> preserved</span> for
+              life.</span>
           </h1>
           <p className={styles.description}>
             Experience our nano coating service that preserves and enhances your
             furniture and interiors for the long term.
           </p>
           <div className={styles.chatBtn}>
-            <ChatButton color="text-white" bgColor="bg-custom-blue" />
+            <ChatButton color="text-white" />
           </div>
         </div>
-        <div className={styles.qoutecontainer}>
+        {/* <div className={styles.qoutecontainer}>
           <p className={styles.get_your_qoute}>Get your qoute</p>
           <HiOutlineArrowNarrowRight size={30} color="#010fad" />
+        </div> */}
+      </div>
+   {/* {    mt-[-30rem] w-full bg-cover bg-no-repeat h-[435px] md:h-[50rem]} */}
+      <div className="mt-[-14rem] md:mt-[-30rem] lg:mt-[-30rem] w-full bg-cover bg-no-repeat h-[435px] md:h-[50rem] bg-[url('/Pattern.svg')] md:bg-[url('/banner.svg')]"
+  // style={{ backgroundImage: "url('/banner.svg')" }}
+    >
+      </div>
+      <div className="flex flex-col mt-[-7.5rem] md:flex-row lg:flex-row justify-between w-full bg-white z-[1] gap-[8px]">
+        <img src="./frame.png" className="md:w-[33%] lg:w-[33%]" />
+
+        {/* Video Thumbnail with Play Button */}
+        <div
+          className={`${"md:w-[33%] lg:w-[33%]"} ${styles.videoThumbnail}`}
+          onClick={playFullscreenVideo}
+        >
+          <video
+            src="./screen.mp4"
+            muted
+            loop
+            className={styles.videoPreview}
+          ></video>
+          <img src="./playBtn.svg" alt="Play" className={styles.playButton} />
         </div>
-      </div>
-      <div className={styles.bannerImage}>
-      </div>
 
-      <div className={styles.frameHolder}>
-      <img src="./frame.png" className={styles.frameItem} />
-      
-      {/* Video Thumbnail with Play Button */}
-      <div
-        className={`${styles.frameItem} ${styles.videoThumbnail}`}
-        onClick={openModal}
-      >
-        <video
-          src="./screen.mp4"
-          muted
-          loop
-          className={styles.videoPreview}
-        ></video>
-        <FaPlay className={styles.playButton} />
-      </div>
+        <img src="./frame2.png" className="md:w-[33%] lg:w-[33%]" />
 
-      <img src="./frame2.png" className={styles.frameItem} />
-      
-      {/* Modal with Fullscreen Video */}
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Video Player"
-        style={{
-          overlay: {
-            backgroundColor: "rgba(0, 0, 0, 0.75)",
-            position: "fixed", // Ensure overlay covers the entire viewport
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            zIndex: 1000, // Ensure overlay is on top
-          },
-          content: {
-            width: "80%",
-            maxWidth: "800px",
-            margin: "auto",
-            background: "black",
-            border: "none",
-            padding: 0,
-            position: "relative", // Ensure content is positioned correctly
-            zIndex: 1001, // Ensure content is on top of the overlay
-          },
-        }}
-      >
-        {/* Close Button */}
-        <button
-          onClick={closeModal}
+        {/* Modal with Fullscreen Video */}
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={closeModal}
+          shouldCloseOnOverlayClick={true} // Makes sure modal closes when clicking outside
+          ariaHideApp={false} // Use this only if you want to prevent accessibility-related warnings in development
+          contentLabel="Video Player"
           style={{
-            position: "absolute",
-            top: "10px",
-            right: "10px",
-            color: "white",
-            background: "transparent",
-            border: "none",
-            fontSize: "24px",
-            cursor: "pointer",
+            overlay: {
+              backgroundColor: "rgba(0, 0, 0, 0.75)",
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: 1000,
+            },
+            content: {
+              width: "80%",
+              maxWidth: "800px",
+              margin: "auto",
+              background: "black",
+              border: "none",
+              padding: 0,
+              position: "relative",
+              zIndex: 1001,
+            },
           }}
         >
-          ✕
-        </button>
+          {/* Close Button */}
+          <button
+            onClick={() => closeModal()}
+            style={{
+              position: "absolute",
+              top: "10px",
+              right: "10px",
+              color: "white",
+              background: "transparent",
+              border: "none",
+              fontSize: "24px",
+              cursor: "pointer",
+              zIndex: 2000, // Increase z-index to ensure it's above other elements
+            }}
+          >
+            ✕
+          </button>
 
-        {/* Fullscreen Video */}
-        <video
-          src="./screen.mp4"
-          controls
-          autoPlay={isVideoPlaying} // Autoplay only when modal is open
-          className={styles.modalVideo}
-        />
-      </Modal>
-    </div>
 
-    
+          {/* Fullscreen Video */}
+          <video
+            src="./screen.mp4"
+            controls
+            autoPlay={isVideoPlaying} // Autoplay only when modal is open
+            className={styles.modalVideo}
+          />
+        </Modal>
+
+
+      </div>
+
+
     </div>
   );
 };

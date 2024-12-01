@@ -16,9 +16,13 @@ const config: Config = {
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],  // Add Lato font here
+        "playfair-display": [ 'Playfair Display', 'serif']
       },
       screens: {
         '2xl': '1920px', // Custom breakpoint for screens larger than 1920px
+      },
+      boxShadow: {
+        'custom': '0px 2px 6px 0px #e3e3e7', // Equivalent to #00000012 (which is rgba(0, 0, 0, 0.07))
       },
     },
   },

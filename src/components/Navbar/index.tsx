@@ -1,118 +1,158 @@
-'use client'
-// import { useState } from 'react';
-// import Link from 'next/link';
+'use client';
+import React from 'react';
+
 import { IoChevronDownSharp } from 'react-icons/io5';
-// import styles from './Navbar.module.css';
-
-// const NavBar = () => {
-//   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-//   const toggleDropdown = () => {
-//     setIsDropdownOpen(!isDropdownOpen);
-//   };
-
-//   return (
-//     <nav className={styles.nav}>
-//       <div className={styles.logo}>
-//         <img src="/Logo.svg" alt="Logo" />
-//       </div>
-//       <ul className={styles.menu}>
-//         <li><Link href="/nano-coating">Nano Coating</Link></li>
-//         <li className={styles.dropdown} onClick={toggleDropdown}>
-//           Services
-//           <IoChevronDownSharp className={styles.icon} />
-//           {isDropdownOpen && (
-//             <ul className={styles.dropdownMenu}>
-//               <li><Link href="/service1">Service 1</Link></li>
-//               <li><Link href="/service2">Service 2</Link></li>
-//               <li><Link href="/service3">Service 3</Link></li>
-//             </ul>
-//           )}
-//         </li>
-//         <li><Link href="/about-us">About Us</Link></li>
-//         <li><Link href="/faqs">FAQs</Link></li>
-//       </ul>
-//     </nav>
-//   );
-// };
-
-
-// export default NavBar;
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import { FiMenu, FiX } from "react-icons/fi"; // Import icons from react-icons
-
+import { SwipeableDrawer } from '@mui/material';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+// import  useRouter  from 'next/router';
+// import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 export default function NavBar() {
+
+  // const router = useRouter();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const toggleDrawer = () => {
-    setIsDrawerOpen(!isDrawerOpen);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const toggleDrawer = (isOpen: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+    // Prevent toggling for certain key events like tab or shift
+    if (event.type === "keydown" && ((event as React.KeyboardEvent).key === "Tab" || (event as React.KeyboardEvent).key === "Shift")) {
+      return;
+    }
+    setIsDrawerOpen(isOpen);
   };
 
+
+  // Track scroll direction to show/hide navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Show the navbar if scrolling up or at the top of the page
+      if (currentScrollY < lastScrollY || currentScrollY === 0) {
+        setIsNavbarVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Hide the navbar if scrolling down
+        setIsNavbarVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
+
+
+
+
+  // const navigateToHome = () => {
+  //   router.push('/');
+  // };
+
+  // const navigateToFitouts = () => {
+  //   router.push('/fitouts');
+  // };
+
+
   return (
-    <nav 
-    // className={styles.nav }
-    className="flex items-center justify-between py-[32px] px-16"
+    <nav
+      className={`${styles.navbar} ${isNavbarVisible ? styles.visible : styles.hidden} flex items-center justify-between my-[29px] mx-[24px] px-[20px] py-[14px] shadow-custom rounded-[12px]
+    md:my-0 md:mx-0 md:px-0 md:py-0 md:shadow-none md:pt-[32px] md:pr-[80px] md:pb-[24px] md:pl-[120px]`}
+      onClick={isDrawerOpen ? () => setIsDrawerOpen(false) : undefined}
     >
       <div className={styles.logo}>
-        <img src="/Logo-Blue.svg" alt="Logo" />
+        {/* <!-- Image for small screens (sm) --> */}
+        <Link href="/">
+          <img
+            src="/mobileLogo.svg"
+            alt="Logo"
+            className="block sm:hidden"
+          /></Link>
+
+
+        {/* <!-- Image for medium (md) and large (lg) screens --> */}
+
+        <Link href="/">
+          <img
+            src="/Logo-Blue.svg"
+            alt="Logo"
+            className="hidden sm:block md:block"
+          /></Link>
+
       </div>
 
-      {/* Desktop Menu */}
-      {/* <ul 
-      className={`${styles.menu} ${styles.desktopMenu}`}
-      // className="hidden md:flex items-center list-none gap-12 font-lato text-[18px] font-medium leading-6 tracking-[0.02em] text-left"
+      <ul
+        className="hidden md:flex items-center list-none gap-12 font-lato text-[18px] font-medium leading-6 tracking-[0.02em] text-left"
+      >
+        <li className="relative cursor-pointer">Nano coating</li>
+        <Link href="/fitouts">
+          <li className="relative flex items-center cursor-pointer group">
+            Fitouts
 
-       >
-        <li>Nano coating</li>
-        <li className={styles.dropdown}>
-          Fitouts <IoChevronDownSharp className={styles.icon} />
-          <ul className={styles.dropdownMenu}>
-            <li>Service 1</li>
-            <li>Service 2</li>
-          </ul>
-        </li>
-        <li>About us</li>
-        <li>FAQs</li>
-      </ul> */}
-      <ul 
-  className="hidden md:flex items-center list-none gap-12 font-lato text-[18px] font-medium leading-6 tracking-[0.02em] text-left"
->
-  <li className="relative cursor-pointer">Nano coating</li>
-  <li className="relative flex items-center cursor-pointer group">
-    Fitouts 
-    {/* <IoChevronDownSharp className="ml-[7px] mt-[2px]" />
-    <ul className="absolute top-full left-0 hidden group-hover:block bg-white border border-gray-300 list-none py-2 min-w-[150px] font-lato text-[18px] font-medium leading-6 tracking-[0.02em] z-10 rounded-md shadow-lg">
-      <li className="px-5 py-2 hover:bg-gray-100 cursor-pointer">Service 1</li>
-      <li className="px-5 py-2 hover:bg-gray-100 cursor-pointer">Service 2</li>
-    </ul> */}
-  </li>
-  <li className="relative cursor-pointer">About us</li>
-  <li className="relative cursor-pointer">FAQs</li>
-</ul>
+          </li> </Link>
+        <Link href="/aboutus">
+          <li className="relative cursor-pointer">About us</li></Link>
+        <li className="relative cursor-pointer">FAQs</li>
+      </ul>
 
 
       {/* Mobile Menu Icon */}
-      <div className={styles.hamburgerIcon} onClick={toggleDrawer}>
-        {isDrawerOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+      <div className={styles.hamburgerIcon} onClick={toggleDrawer(true)}>
+        {!isDrawerOpen && <FiMenu size={24} />}
       </div>
 
-      {/* Mobile Drawer */}
-      <div className={`${styles.drawer} ${isDrawerOpen ? styles.open : ""}`}>
-        <ul className={styles.mobileMenu}>
-          <li onClick={toggleDrawer}>Nano coating</li>
+
+      {/* <div className={styles.hamburgerIconClose} onClick={toggleDrawer}>
+        <FiX size={24} />
+      </div> */}
+      <SwipeableDrawer
+        sx={{
+          "& .MuiDrawer-paper": {
+            width: "50%", // Sets the drawer's width
+          },
+        }}
+        anchor={'right'}
+        open={isDrawerOpen}
+        onClose={toggleDrawer(false)}
+        onOpen={toggleDrawer(true)}
+      >   <ul className={styles.mobileMenu}>
+          <li>{isDrawerOpen && (
+            // <div className={styles.hamburgerIconClose} onClick={toggleDrawer}>
+
+            <div className="flex items-center justify-between space-x-4">
+              <img
+                src="/mobileLogo.svg"
+                alt="Logo"
+                className="block sm:hidden"
+              />
+              <FiX size={24} />
+
+            </div>
+          )}</li>
+          <li onClick={() => { }}>Nano coating</li>
+          <Link href="/fitouts">
           <li className={styles.dropdown}>
-          Services <IoChevronDownSharp className={styles.icon} />
+            Fitouts 
+             {/* <IoChevronDownSharp className={styles.icon} />
             <ul className={styles.dropdownMenu}>
-              <li onClick={toggleDrawer}>Service 1</li>
-              <li onClick={toggleDrawer}>Service 2</li>
-            </ul>
-          </li>
-          <li onClick={toggleDrawer}>About us</li>
-          <li onClick={toggleDrawer}>FAQs</li>
+              <li onClick={() => { }}>Service 1</li>
+              <li onClick={() => { }}>Service 2</li>
+            </ul> */}
+          </li></Link>
+          <Link href="/aboutus">  <li onClick={() => { }}>About us</li></Link>
+          <li onClick={() => { }}>FAQs</li>
         </ul>
-      </div>
+
+
+      </SwipeableDrawer>
+
     </nav>
   );
 }

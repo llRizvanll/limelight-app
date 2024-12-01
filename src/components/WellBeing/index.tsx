@@ -1,10 +1,13 @@
+'use client';
+import { Divider } from "@mui/material";
 import styles from "./WellBeing.module.css";
 
 const WellBeing = () => {
   return (
     <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
-      <div className={styles.container}>
-        <div className={styles.sectionFirst}>
+     
+      <div className={`${styles.container} '!pb-[88px]'`}>
+        <div className={`${styles.sectionFirst} ''`}>
           <h2>
             We care for your{" "}
             <span className={styles.wellBeing}>Well Being </span> and the
@@ -26,10 +29,16 @@ const WellBeing = () => {
               <p>Organic</p>
             </div>
             <div className="flex flex-col items-center justify-center h-full gap-[16px] p-[64px] border-b border-[#dedddd] font-lato">
+            {/* <div className="flex flex-col items-center justify-center h-full gap-[16px] p-[64px] sm:p-[16px]  font-lato"> */}
+  {/* Content here */}
+
             {/* <div className="flex flex-col items-center justify-center h-full border border-[#dedddd] border-t-0 border-b-0 gap-4 p-4"> */}
               <img src="/check.svg" alt="Premium" />
               <p>Premium</p>
             </div>
+            {/* <Divider
+            className={'divider border-[0.1px] ml-[10%]'}
+          /> */}
             <div className="flex flex-col items-center justify-center h-full gap-[16px] p-[64px] border-r border-[#dedddd] font-lato">
             {/* <div className="flex flex-col items-center justify-center h-full border border-[#dedddd] border-b-0 gap-[16px] p-4"> */}
               <img src="/odourless.svg" alt="odourless" />
