@@ -1,6 +1,8 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
+import ProtectionSection from '@/components/ProtectionSection';
+import WellBeing from '@/components/WellBeing';
 // Dynamically import components, and make sure they are marked as client components
 // const Banner = dynamic(() => import('@/components/Banner'));
 // const BestInclass = dynamic(() => import('@/components/BestInClass'));
@@ -31,6 +33,8 @@ export default function Home() {
       <NavBar />
       <Banner />
       <BestInclass />
+      <ProtectionSection />
+      <WellBeing />
       <ProcessSteps />
       <BestInCompetition />
       <Testimonials />

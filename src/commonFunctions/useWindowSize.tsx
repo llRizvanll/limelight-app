@@ -1,32 +1,36 @@
-import { useState, useEffect } from "react";
+import React from "react";
 
-export function useWindowSize() {
-  const isSSR = typeof window === "undefined";
+const useScreenType = () => {
+    const [windowSize, setWindowSize] = React.useState() as any;
+  
+    React.useEffect(() => {
+      const handleResize = () =>{
+        if (typeof window !== "undefined") {  
+            let type;          
+            if (window.innerWidth < 744)
+                type = "MOBILE";
+            else if (window.innerWidth >= 744 && window.innerWidth < 1133 && window.innerHeight > window.innerWidth)
+                type = "TABLET_PORTRAIT";
+            else if (window.innerWidth >= 744 && window.innerWidth < 1133)
+                type = "TABLET";
+            else if (window.innerWidth >= 1133 && window.innerWidth < 1280)
+                type = "TABLET_LANDSCAPE";
+            else  type = "DESKTOP";
+            return setWindowSize(type)
+        }
+      }
+  
+      window.addEventListener('resize', handleResize);
+  
+      handleResize();
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+  
+    return windowSize;
+  };
 
-  const [windowSize, setWindowSize] = useState({
-    width: isSSR ? 0 : window.innerWidth,
-    height: isSSR ? 0 : window.innerHeight,
-  });
-
-  useEffect(() => {
-    if (isSSR) return;
-
-    let resizeTimeout: NodeJS.Timeout;
-
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      }, 100); // Debounce interval
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Update size on mount
-    return () => window.removeEventListener("resize", handleResize);
-  }, [isSSR]);
-
-  return windowSize;
-}
+export default useScreenType;
+// window.innerWidth < 744

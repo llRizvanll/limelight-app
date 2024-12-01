@@ -26,7 +26,7 @@
   font-weight: 500;
   line-height: 48px;
   letter-spacing: 0.02em;
-  text-align: center;
+  text-align: left;
   color: #3b3a37;
 }
 
@@ -49,6 +49,37 @@
   margin-top: 64px;
   margin-bottom: 64px;
 }
+
+.stepsContainer2 {
+    display: flex;
+    flex-direction: column; /* Stack the lines vertically */
+    /* gap: 20px;  */
+}
+.stepSection2 {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of cards on smaller screens */
+  justify-content: space-between; /* Spread items evenly for web layout */
+  gap: 16px; /* Space between individual cards */
+  row-gap: 20px; /* Vertical space for wrapped cards */
+}
+
+/* Styles for the first line (steps) */
+.steps .stepCardweb {
+    width: 588px; /* Fill width */
+    height: 374px; /* Fill height */
+    padding: 56px 44px;
+    gap: 24px; /* Space between content inside the card */
+    box-sizing: border-box; /* Ensure padding is included in dimensions */
+  }
+  
+  /* Styles for the second line (steps2) */
+  .steps2 .stepCardweb {
+    width: 384px; /* Fill width */
+    height: 444px; /* Fill height */
+    padding: 56px 44px;
+    gap: 24px; /* Space between content inside the card */
+    box-sizing: border-box;
+  }
 
 .stepCard {
   padding: 3rem 5rem;
@@ -74,9 +105,25 @@
   gap: 24px;
   /* position: relative; */
   margin: 10px;
+  width: 588px;
+  height: 374px;
 
-  width: Fill (588px)px;
-height: Fill (374px)px;
+}
+
+
+.stepCard3 {
+  /* padding: 3rem 5rem; */
+  background: #F4F4F5;
+  padding: 56px 44px 56px 44px;
+  /* border-right: 1px solid #dedddd; */
+  /* border: 1px solid #dedddd; */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* position: relative; */
+  margin: 10px;
+  width: 384px;
+  height: 444px;
 
 }
 
@@ -84,8 +131,8 @@ height: Fill (374px)px;
 .stepCountShower {
   border: 1px solid #414bc1;
   border-radius: 100%;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,6 +299,11 @@ height: Fill (374px)px;
     margin: 10px 0rem;
     padding: 3rem 2rem;
     width: 90%;
+  }
+  .containerh2 {
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
   }
 
   .containerh2,

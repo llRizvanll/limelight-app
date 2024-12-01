@@ -4,7 +4,7 @@ import styles from "./FitStepCard.module.css";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import ChatButton from "../Buttons/ChatButton";
 import FitStepCard from "./FitStepCard";
-import { useWindowSize } from "@/commonFunctions/useWindowSize";
+import useScreenType from "@/commonFunctions/useWindowSize";
 // import StepCard from "./StepCard";
 
 const FitSteps = () => {
@@ -49,8 +49,8 @@ const FitSteps = () => {
             showArrow: false,
         },]
 
-        const { width, height } = useWindowSize();
-    const isMobile = width > 768;
+   const screenType  = useScreenType()
+    const isMobile = screenType === "MOBILE"
 
     return (
 
@@ -66,7 +66,7 @@ const FitSteps = () => {
 
 
                 <div className={styles.stepsContainer}>
-                    {isMobile ? (
+                    {/* {isMobile ? (
                         steps.map((step) => (
                             <FitStepCard
                                 key={step.stepNumber}
@@ -76,8 +76,8 @@ const FitSteps = () => {
                                 showArrow={step.showArrow}
                             />
                         ))) : (
-                        <>
-                            <div className={styles.stepSection}>
+                        <> */}
+                            {/* <div className={styles.stepSection}>
                                 {steps?.map((step) => (
                                     <FitStepCard
                                         key={step.stepNumber}
@@ -97,10 +97,10 @@ const FitSteps = () => {
                                         description={step.description}
                                         showArrow={step.showArrow}
                                     />
-                                ))}</div>
-                        </>
+                                ))}</div> */}
+                        {/* </>
                     )
-                    }
+                    } */}
                 </div>
                 {/* <div className={styles.stepsContainer}>
                     {isMobile ? (
@@ -139,6 +139,36 @@ const FitSteps = () => {
                     )
                     }
                 </div> */}
+
+<div className={styles.stepsContainer2}>
+  {/* First line: Steps */}
+  <div className={`${styles.stepSection} ${styles.steps}`}>
+    {steps?.map((step) => (
+      <FitStepCard
+        key={step.stepNumber}
+        stepNumber={step.stepNumber}
+        title={step.title}
+        description={step.description}
+        showArrow={step.showArrow}
+      />
+    ))}
+  </div>
+
+  {/* Second line: Steps2 */}
+  <div className={`${styles.stepSection} ${styles.stepCardweb}`}>
+    {steps2?.map((step) => (
+      <FitStepCard
+        key={step.stepNumber}
+        stepNumber={step.stepNumber}
+        title={step.title}
+        description={step.description}
+        showArrow={step.showArrow}
+        nextLine={true}
+      />
+    ))}
+  </div>
+</div>
+
 
 
 

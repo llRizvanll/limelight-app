@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap");
+
+.root {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  /* width: 70.5%;
+  margin: 2rem 0rem; */
+  /* margin-top: 42px; */
+  /* background: #f2f3fa; */
+  /* display: flex; */
+  align-items: center;
+
+
+  width:70.5%;
+  margin: 2rem 0rem;
+  /* margin-top: 42px; */
+  background: #F4F4F5;
+
+  display: flex;
+}
+
+.splitSofa {
+    height: 894px;
+    background-image: url("/sofaimage.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 0px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+/* .firstSection {
+  flex: 1;
+  background-image: url("/originStory.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 602px; 
+  width: 690px;
+} */
+.firstSection {
+    flex: 1;
+    background-image: url("/originStory.png");
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    width: 690px; /* Width of the cropped area */
+    height: 636px; /* Height of the cropped area */
+  }
+  
+
+
+.secondSection {
+    height: 636px; /* Height of the cropped area */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  font-family: Playfair Display;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3b3a37;
+  width: 50%;
+  padding-top: 101px;     
+  padding-bottom: 72px;  
+  padding-left: 46px;    
+  padding-right: 44px;
+  /* margin-left: 24px; */
+}
+
+.nanoCoating {
+  font-family: Playfair Display;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #414bc1;
+}
+
+.indicatorsContainer {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 44px;
+}
+
+/* .indicators {
+width: 177px;
+} */
+.indicators h3 {
+  font-family: Lato;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3b3a37;
+  /* min-width: 177px; */
+}
+.indicators p {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #666563;
+}
+
+@media (max-width: 1640px) {
+  .secondSection {
+    padding: 2rem 2rem;
+  }
+  .indicators h3 {
+    font-size: 34px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    flex-direction: column;
+  }
+  .firstSection {
+    min-height: 20rem;
+  }
+  .secondSection {
+    padding: 2rem 2rem;
+    width: 100%;
+  }
+  .indicators h3 {
+    font-size: 34px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: 100%;
+    margin-top: 0;
+  }
+  .root {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.secondSection {
+    height: unset;
+}
+.indicators p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+   
+  }
+  .titleHolder p {
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    
+   
+  }
+  .nanoCoating {
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 30px;
+  
+    text-align: left;
+ 
+    color: #414bc1;
+  }
+
+.firstSection {
+    flex: 1;
+    background-image: url("/originStory.png");
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    width: 390px; /* Width of the cropped area */
+    height: 324px; /* Height of the cropped area */
+  }
+}
