@@ -89,7 +89,7 @@ const Banner = () => {
         >
           {tabs.map((tab) => (
 
-            <div key={tab} className="relative w-[120px] px-4 py-2 mx-1 cursor-pointer text-[#010FAD] bg-[#ebecfc] font-Lato text-sm font-normal text-center border-none">
+            <div key={tab} className="relative w-[120px] px-4 py-2 mx-1 cursor-pointer text-[#010FAD] bg-[#ebecfc] font-lato text-sm font-normal text-center border-none">
               {tab}
               <div className="absolute top-0 left-[-2px] w-[calc(100%+4px)] h-[1px] bg-[#A6ABE2]"></div>  {/* Top border */}
               <div className="absolute bottom-0 left-[-2px] w-[calc(100%+4px)] h-[1px] bg-[#A6ABE2]"></div> {/* Bottom border */}

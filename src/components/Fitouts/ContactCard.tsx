@@ -27,7 +27,7 @@ export default function FitoutBottomSection() {
         >
           {tabs.map((tab) => (
 
-            <div key={tab} className=" flex relative w-[191px] px-4 py-2 mx-1 cursor-pointer text-[#010FAD] bg-[#ebecfc] font-Lato text-sm font-normal text-center border-none">
+            <div key={tab} className=" flex relative w-[191px] px-4 py-2 mx-1 cursor-pointer text-[#010FAD] bg-[#ebecfc] font-lato text-sm font-normal text-center border-none">
                 {/* Icon Condition */}
           <div className="mr-2">
             {tab.includes("@") ? (
@@ -48,7 +48,7 @@ export default function FitoutBottomSection() {
             
    
      </div>
-     </div>
+          </div>
 
      
           {/* <div className={styles.chatBtn}>

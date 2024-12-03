@@ -26,7 +26,7 @@ const WellBeing = () => {
             // border border-[#dedddd] border-t-0 border-b-0 gap-4 p-4 border-r-0 border-l-0"
             >
               <img src="/leaf.svg" alt="Leaf" />
-              <p>Organic</p>
+              <p className="text-[#3B3A37]">Organic</p>
             </div>
             <div className="flex flex-col items-center justify-center h-full gap-[16px] p-[64px] border-b border-[#dedddd] font-lato">
             {/* <div className="flex flex-col items-center justify-center h-full gap-[16px] p-[64px] sm:p-[16px]  font-lato"> */}
@@ -34,7 +34,7 @@ const WellBeing = () => {
 
             {/* <div className="flex flex-col items-center justify-center h-full border border-[#dedddd] border-t-0 border-b-0 gap-4 p-4"> */}
               <img src="/check.svg" alt="Premium" />
-              <p>Premium</p>
+              <p className="text-[#3B3A37]">Premium</p>
             </div>
             {/* <Divider
             className={'divider border-[0.1px] ml-[10%]'}
@@ -42,12 +42,12 @@ const WellBeing = () => {
             <div className="flex flex-col items-center justify-center h-full gap-[16px] p-[64px] border-r border-[#dedddd] font-lato">
             {/* <div className="flex flex-col items-center justify-center h-full border border-[#dedddd] border-b-0 gap-[16px] p-4"> */}
               <img src="/odourless.svg" alt="odourless" />
-              <p>Odourless</p>
+              <p className="text-[#3B3A37]">Odourless</p>
             </div>
             <div className="flex flex-col items-center justify-center h-full gap-[16px] p-[64px] font-lato">
             {/* <div className="flex flex-col items-center justify-center h-full border border-[#dedddd] border-b-0 gap-4 p-4"> */}
               <img src="/safe.svg" alt="Safe" />
-              <p>Safe</p>
+              <p className="text-[#3B3A37]">Safe</p>
             </div>
           </div>
         </div>
