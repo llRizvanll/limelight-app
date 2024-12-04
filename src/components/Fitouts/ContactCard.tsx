@@ -40,8 +40,8 @@ export default function FitoutBottomSection() {
               {tab}
               <div className="absolute top-0 left-[-2px] w-[calc(100%+4px)] h-[1px] bg-[#A6ABE2]"></div>  {/* Top border */}
               <div className="absolute bottom-0 left-[-2px] w-[calc(100%+4px)] h-[1px] bg-[#A6ABE2]"></div> {/* Bottom border */}
-              <div className="absolute left-0 top-[-2px] w-[1px] h-[calc(100%+4px)] bg-[#A6ABE2]"></div>  {/* Left border */}
-              <div className="absolute right-0 bottom-[-2px] w-[1px] h-[calc(100%+4px)] bg-[#A6ABE2]"></div> {/* Right border */}
+              <div className="absolute left-0 top-0 w-[1px] h-[100%] bg-[#A6ABE2]"></div>  
+                      <div className="absolute right-0 bottom-0 w-[1px] h-[100%] bg-[#A6ABE2]"></div> 
             </div>
           ))}
         </div>

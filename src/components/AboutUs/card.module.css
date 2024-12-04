@@ -16,6 +16,22 @@
     width: 104px;
     height: 104px;
   }
+
+  .iconContainer {
+  width: 104px;
+  height: 104px;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vectorimg {
+  width: 72px;
+  height: 72px;
+}
+
   
   /* Divider */
   .divider {
@@ -79,6 +95,24 @@
         flex-wrap: wrap;
         justify-content: space-between;
       }
-}
+
   
+}
+@media (max-width: 468px) {
+
+.iconContainer {
+    width: 64px;
+    height: 64px;
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+    .vectorimg {
+    width: 44.31px;
+    height: 44.31px;
+  }
+}
   

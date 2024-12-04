@@ -38,9 +38,9 @@ const Banner = () => {
         <div className={styles.content}>
           <h1 className="font-playfair-display  ">
           Experience rooted in  
-            <span className="block">effortlessly
+            <span className="block">
 
-              <span className="text-[#4a5bc1] italic font-medium"> 30 years</span> of mastery.</span>
+              <span className="text-[#4a5bc1] italic font-medium break-words"> 30 years</span> of mastery.</span>
           </h1>
           {/* <p className={styles.description}>
             Experience our nano coating service that preserves and enhances your
@@ -56,7 +56,7 @@ const Banner = () => {
         </div> */}
       </div>
    {/* {    mt-[-30rem] w-full bg-cover bg-no-repeat h-[435px] md:h-[50rem]} */}
-      <div className="mt-[-14rem] md:mt-[-30rem] lg:mt-[-30rem] w-full bg-cover bg-no-repeat h-[435px] md:h-[50rem] bg-[url('/aboutheader.png')] md:bg-[url('/aboutheader.png')]"
+      <div className="mt-[-18rem] md:mt-[-30rem] lg:mt-[-30rem] w-full bg-cover bg-no-repeat h-[480px] md:h-[50rem] bg-[url('/aboutHeaderMobile.png')] sm:bg-[url('/aboutHeaderMobile.png')] md:bg-[url('/aboutheader.png')]"
   // style={{ backgroundImage: "url('/banner.svg')" }}
     >
       </div>

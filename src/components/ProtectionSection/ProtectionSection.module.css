@@ -9,6 +9,10 @@
   padding: 20px 0px;
   display: flex;
   padding-top: 88px !important;
+margin-top: 88px;
+
+  padding-bottom: 88px !important;
+  margin-bottom: 88px;
 
     
 }
@@ -196,6 +200,9 @@ height: "428px", */
   .container {
     flex-direction: column;
     width: 100%;
+    margin-top:unset;
+    padding-bottom: 44px !important;
+    margin-bottom: 17px !important;
   }
 }
 

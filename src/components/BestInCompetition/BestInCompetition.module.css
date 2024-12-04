@@ -9,8 +9,10 @@
   width: 80%;
   margin: 10px 0px;
   padding: 20px 0px;
-  padding-top: 88px;
+  padding-top: 88px !important;
   gap: 88px;
+  margin-top: 88px !important;
+
 }
 
 .container {
@@ -63,6 +65,7 @@
   border-bottom: 1px solid #dedddd;
   width: 30%;
   text-align: center;
+  font-family: Lato;
 }
 
 .header .cell {
@@ -109,7 +112,9 @@
 
 @media (max-width: 780px) {
   .container {
-    width: 100%;
+    width: 100%;  
+    padding-top: 44px !important;
+    margin-top: 44px !important;
   }
   .header .cell {
     font-size: 14px;

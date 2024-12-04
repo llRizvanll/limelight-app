@@ -1,6 +1,6 @@
 
 
-
+"use client"
 import React from "react";
 // import Card from "./Card";
 import { FiCoffee, FiAirplay, FiAnchor } from "react-icons/fi";
@@ -11,17 +11,20 @@ import OriginStorySection from "./Originstory";
 const AboutUsSecondCard: React.FC = () => {
     const cards = [
         {
-            icon: <img src="/tickframe.svg" />,
+            icon: "/Vector-4.svg",
+            iconCell: "/Vector-5.svg",
             heading: "Excellence in detail",
             description: "We believe that quality isn’t just a goal; it’s a commitment seen in every surface we protect.",
         },
         {
-            icon: <img src="/iconframe3.svg" />,
+            icon: "/Vector-3.svg",
+            iconCell: "/Vector-7.svg",
             heading: "Integrity in service",
             description: "Our promise is transparency and honesty, so you can trust every step we take together.",
         },
         {
-            icon: <img src="/iconframe3.svg" />,
+            icon: "/arm.svg",
+            iconCell: "/Vector-6.svg",
             heading: "Customer centricity",
             description: "Your satisfaction and peace of mind drive our dedication to create tailored, effective solutions.",
         },
@@ -37,6 +40,7 @@ const AboutUsSecondCard: React.FC = () => {
                     <Card
                         key={index}
                         icon={card.icon}
+                        iconCell={card.iconCell}
                         heading={card.heading}
                         description={card.description}
                     />
@@ -44,14 +48,8 @@ const AboutUsSecondCard: React.FC = () => {
 
 
                 <div className={styles.divider}></div>
-      
-
-
-
+    
             </div>
-
-
-     {/* <OriginStorySection /> */}
 
         </div>
     );

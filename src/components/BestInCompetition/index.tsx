@@ -6,7 +6,7 @@ const BestInCompetition = () => {
 
   return (
     <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
-            <div className={`${styles.container} '!pt-[88px] !mt-[88px] border-t border-[#66656333] w-full'`}>
+            <div className={`${styles.container} '!pt-[88px] !mt-[88px] !sm:pt-[44px] !sm:mt-[44px] border-t border-[#66656333] w-full'`}>
       {/* <div className={styles.container}> */}
         <div>
           <h2 className={styles.heading}>
@@ -30,7 +30,7 @@ const BestInCompetition = () => {
         </div>
       </div>
       <div className={styles.row}>
-        <div className={`${styles.cell}font-normal text-[#3B3A37]`}>Versatility</div>
+        <div className={`${styles.cell} text-[#3B3A37]`}>Versatility</div>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>
           Ideal for living rooms, sofas, rugs, entire villas, office spaces, bedrooms, and/or individual pieces
         </div>
@@ -40,17 +40,17 @@ const BestInCompetition = () => {
       </div>
       <div className={styles.row}>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Eco-friendly coating solution</div>
-        <div className={`${styles.cell}`}><DoneIcon /></div>
+        <div className={`${styles.cell} text-[#3B3A37]`}><DoneIcon /></div>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>–</div>
       </div>
       <div className={styles.row}>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Odourless</div>
-        <div className={`${styles.cell}`}><DoneIcon /></div>
+        <div className={`${styles.cell}  text-[#3B3A37]`}><DoneIcon /></div>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Not at all</div>
       </div>
       <div className={styles.row}>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Antimicrobial</div>
-        <div className={`${styles.cell}`}><DoneIcon /></div>
+        <div className={`${styles.cell} text-[#3B3A37]`}><DoneIcon /></div>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>No guarantee</div>
       </div>
       <div className={styles.row}>

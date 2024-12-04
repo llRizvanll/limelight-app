@@ -45,7 +45,7 @@
     background-size: cover; /* Ensures the image covers the entire element */
     background-position: center; /* Center the image */
     background-repeat: no-repeat;
-    width: 690px; /* Width of the cropped area */
+    width: 100%; /* Width of the cropped area */
     height: 636px; /* Height of the cropped area */
   }
   
@@ -196,7 +196,7 @@ width: 177px;
     background-size: cover; /* Ensures the image covers the entire element */
     background-position: center; /* Center the image */
     background-repeat: no-repeat;
-    width: 390px; /* Width of the cropped area */
+    width: 100%; ; /* Width of the cropped area */
     height: 324px; /* Height of the cropped area */
   }
 }
