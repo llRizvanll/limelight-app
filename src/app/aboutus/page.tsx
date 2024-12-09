@@ -1,7 +1,8 @@
 
 
 
-  import dynamic from "next/dynamic";
+  import ServiceOfferSection from "@/components/AboutUs/servicesweoffer";
+import dynamic from "next/dynamic";
 
 // Dynamically import components
 const NavBar = dynamic(() => import("@/components/Navbar"));
@@ -20,6 +21,7 @@ export default function AboutUs() {
   
            <OriginStorySection />
            <AboutUsSecondCard />
+           <ServiceOfferSection />
       {/* <Testimonials /> */}
       {/* <SplitSofaSection /> */}
       <AboutBottomSection />

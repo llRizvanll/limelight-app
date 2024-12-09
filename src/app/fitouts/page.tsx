@@ -1,25 +1,3 @@
-// import FitoutBottomSection from "@/components/Fitouts/ContactCard";
-// import FitoutHeader from "@/components/Fitouts/FitoutsHeader.page";
-// import Footer from "@/components/Footer";
-// import NavBar from "@/components/Navbar";
-// import ProcessSteps from "@/components/ProcessSteps";
-// import SplitSofaSection from "@/components/SplitSofaSection";
-// import Testimonials from "@/components/Testimonials";
-
-
-
-// export default function AboutUs() {
-//     return (
-//       <div>
-//          <NavBar />
-//          <FitoutHeader />
-//          <Testimonials />
-//          {/* <SplitSofaSection /> */}
-//          <FitoutBottomSection />
-//          <Footer />
-//       </div>
-//     );
-//   }
 
 import React from 'react';
 import dynamic from "next/dynamic";

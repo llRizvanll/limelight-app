@@ -1,0 +1,241 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap");
+
+.root {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  margin: 10px 0px;
+  padding: 20px 3rem;
+  /* background: #f2f3fa; */
+}
+.imageContainer {
+    background: #3b3a37;
+    display: flex;
+    width: 588px;
+    height: 286px;
+    justify-content: center;
+
+padding: 26px 55px 26px 55px;
+gap: 8px;
+
+
+  }
+
+
+.headingholder {
+  margin-bottom: 1rem;
+}
+
+.containerh2 {
+  font-family: Playfair Display;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #3b3a37;
+}
+
+.containerh3 {
+  font-family: Playfair Display;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #414bc1;
+}
+
+.qoutecontainer {
+    display: flex;
+    margin: auto;
+   padding: 14px 0px 14px 0px;
+   gap: 8px;
+
+
+  }
+  .get_your_qoute {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #010FAD;
+  }
+
+.stepsContainer2 {
+    display: flex;
+    flex-direction: row; /* Stack the lines vertically */
+
+    align-items: center;
+    justify-content: center;
+}
+
+.textContainer2 {
+
+padding: 40px 44px 40px 44px;
+gap: 8px;
+background: #F4F4F5;
+  }
+
+
+
+
+.stepCard {
+  /* padding: 3rem 5rem; */
+  /* border-right: 1px solid #dedddd; */
+  /* border: 1px solid #dedddd; */
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+  position: relative;
+  margin: 10px;
+  width: 588px;
+  /* height: 568px; */
+
+}
+
+
+
+
+.stepTitle {
+  font-family: Lato;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #3b3a37;
+}
+
+.stepDesc {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #666563;
+}
+
+.stepSection {
+  margin-bottom: 20px; /* Add spacing between sections */
+  display: flex;
+  flex-wrap: wrap; /* Arrange cards in a row for web */
+  gap: 16px; /* Space between cards */
+}
+
+.stepFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0px;
+  gap: 24px;
+}
+
+.bottomTitle {
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #666563;
+}
+
+
+@media (max-width: 580px) {
+  .container {
+    padding: 1rem 0rem;
+  }
+
+.stepsContainer2 {
+    display: flex;
+    flex-direction: column; /* Stack the lines vertically */
+
+}
+
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 359px;
+    height: 286px;
+  }
+  .containerh3 {
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #414bc1;
+  }
+
+  .containerh2 {
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #3b3a37;
+  }
+
+
+
+  .stepCard {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 10px;
+    width: 359px;
+  }
+
+  .bottomTitle {
+    display: flex;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  .stepTitle {
+    display: flex;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 44px;
+  }
+
+
+  .stepDesc {
+    display: flex;
+    text-align: left;
+      font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  }
+
+  .textContainer2 {
+    background: #F4F4F5;
+    width: 359px;
+    padding: 40px 44px 40px 44px;
+    gap: 8px;
+
+  }
+}

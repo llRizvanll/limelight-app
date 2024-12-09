@@ -91,15 +91,15 @@ export default function NavBar() {
       <ul
         className="hidden md:flex items-center list-none gap-12 font-lato text-[18px] font-medium leading-6 tracking-[0.02em] text-left"
       >
-        <li className="relative cursor-pointer">Nano coating</li>
+        <li className="relative cursor-pointer text-[#3B3A37]">Nano coating</li>
         <Link href="/fitouts">
-          <li className="relative flex items-center cursor-pointer group">
+          <li className="relative flex items-center cursor-pointer group  text-[#3B3A37]">
             Fitouts
 
           </li> </Link>
         <Link href="/aboutus">
-          <li className="relative cursor-pointer">About us</li></Link>
-        <li className="relative cursor-pointer">FAQs</li>
+          <li className="relative cursor-pointer  text-[#3B3A37]">About us</li></Link>
+        <li className="relative cursor-pointer  text-[#3B3A37]">FAQs</li>
       </ul>
 
 
