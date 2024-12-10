@@ -5,9 +5,12 @@
 }
 .container {
   width: 80%;
+  max-width: 1200px;
   margin: 2rem 0rem;
   margin-top: 106px;
-  background: #f2f3fa;
+  background: #F4F4F5;
+
+
   display: flex;
 }
 .firstSection {
@@ -125,5 +128,15 @@ width: 177px;
   .root {
   padding-left: 16px;
   padding-right: 16px;
+}
+
+.nanoCoating {
+  font-family: Playfair Display;
+  font-size: 24px;
+  line-height: 30px;
+}
+.secondSection {
+  font-size: 24px;
+  line-height: 30px;
 }
 }

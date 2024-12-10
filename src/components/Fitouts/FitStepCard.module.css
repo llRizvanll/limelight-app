@@ -6,6 +6,7 @@
 
 .container {
   width: 80%;
+  /* max-width: 1200px; */
   margin: 10px 0px;
   padding: 20px 3rem;
   /* background: #f2f3fa; */
@@ -41,7 +42,7 @@
   /* border: 1px solid #3b3a3740; */
   display: flex;
   /* flex-direction: column; */
-  
+  align-items: center;
   margin-top: 64px;
   margin-bottom: 64px;
 }
@@ -49,11 +50,13 @@
 .stepsContainer2 {
     display: flex;
     flex-direction: column; /* Stack the lines vertically */
+    align-items: center;
     /* gap: 20px;  */
 }
 .stepSection2 {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping of cards on smaller screens */
+  /* flex-wrap: wrap;  */
+  /* Allow wrapping of cards on smaller screens */
   justify-content: space-between; /* Spread items evenly for web layout */
   gap: 16px; /* Space between individual cards */
   row-gap: 20px; /* Vertical space for wrapped cards */
@@ -84,10 +87,9 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
   position: relative;
   margin: 10px;
-
+  max-width: 588px;
 }
 
 .stepCard2 {
@@ -180,7 +182,8 @@
 .stepSection {
   margin-bottom: 20px; /* Add spacing between sections */
   display: flex;
-  flex-wrap: wrap; /* Arrange cards in a row for web */
+  /* flex-wrap: wrap;  */
+  /* Arrange cards in a row for web */
   gap: 16px; /* Space between cards */
 }
 
@@ -243,6 +246,12 @@
 }
 
 @media (max-width: 1080px) {
+    .stepSection {
+        flex-wrap: wrap;
+      }
+      .stepSection2 {
+        flex-wrap: wrap;
+      }
   .stepsContainer {
     flex-direction: column;
   }
@@ -291,10 +300,16 @@
 }
 
 @media (max-width: 580px) {
+    .stepSection {
+        flex-wrap: wrap;
+      }
   .container {
     margin: 10px 0rem;
     padding: 3rem 2rem;
     width: 90%;
+  }
+  .stepSection2 {
+    flex-wrap: wrap;
   }
   .containerh2 {
     text-align: center;
@@ -331,8 +346,12 @@
 }
 
 @media (max-width: 480px) {
+
   .container {
     padding: 1rem 0rem;
+  }
+  .stepSection2 {
+    flex-wrap: wrap;
   }
 
   .stepsContainer {
@@ -385,5 +404,9 @@
       font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  }
+
+  .stepSection {
+    flex-wrap: wrap;
   }
 }

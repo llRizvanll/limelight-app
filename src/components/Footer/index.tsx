@@ -2,6 +2,7 @@
 import { IoLocationSharp } from "react-icons/io5";
 import styles from "./Footer.module.css";
 import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -23,11 +24,17 @@ export default function Footer() {
           <div className={styles.column}>
             <h3>Company</h3>
             <ul>
-              <li>Nano-coating</li>
-              <li>Fit-outs</li>
-              <li>About us</li>
-              <li>FAQs</li>
-              <li>Testimonials</li>
+            <Link href="/">    <li>Nano-coating</li></Link>
+            <Link href="/fitouts">    <li>Fit-outs</li></Link>
+            <Link href="/aboutus">   <li>About us</li></Link>
+            <Link href="/">    <li>FAQs</li></Link>
+            <Link href="/">  <li>Testimonials</li></Link>
+        
+      
+            
+             
+            
+             
             </ul>
           </div>
           <div className={styles.column}>
