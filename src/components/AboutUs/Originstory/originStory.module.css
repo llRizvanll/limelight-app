@@ -52,7 +52,8 @@
 
 
 .secondSection {
-    height: 636px; /* Height of the cropped area */
+  height: 384px; /* Height of the cropped area */
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,7 +67,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #3b3a37;
-  width: 50%;
+  /* width: 50%; */
   padding-top: 101px;     
   padding-bottom: 72px;  
   padding-left: 46px;    
