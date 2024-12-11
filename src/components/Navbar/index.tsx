@@ -91,7 +91,9 @@ export default function NavBar() {
       <ul
         className="hidden md:flex items-center list-none gap-12 font-lato text-[18px] font-medium leading-6 tracking-[0.02em] text-left"
       >
-        <li className="relative cursor-pointer text-[#3B3A37]">Nano coating</li>
+        {/* <li className="relative cursor-pointer text-[#3B3A37]">Nano coating</li> */}
+        <Link href="/">
+        <li className="relative cursor-pointer text-[#3B3A37]">Nano coating</li></Link>
         <Link href="/fitouts">
           <li className="relative flex items-center cursor-pointer group  text-[#3B3A37]">
             Fitouts
@@ -136,7 +138,11 @@ export default function NavBar() {
 
             </div>
           )}</li>
-          <li onClick={() => { }}>Nano coating</li>
+
+<Link href="/">
+<li onClick={() => { }}>Nano coating</li>
+</Link>
+          {/* <li onClick={() => { }}>Nano coating</li> */}
           <Link href="/fitouts">
           <li className={styles.dropdown}>
             Fitouts 

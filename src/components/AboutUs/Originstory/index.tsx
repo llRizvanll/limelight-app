@@ -11,8 +11,8 @@ const OriginStorySection = () => {
             <div className={styles.container}>
 
 
-                <div className={styles.firstSection}>
-                </div>
+                {/* <div className={styles.firstSection}>
+                </div> */}
                 <div className={styles.secondSection}>
 
              

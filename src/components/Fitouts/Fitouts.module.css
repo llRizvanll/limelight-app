@@ -24,6 +24,9 @@
   width: 80%;
   margin: 10px 0px;
   padding: 20px 0px;
+  justify-content: center;
+  width: 100%;
+display: flex;
 }
 .splitSofaBottom {
   background: #414bc1;
@@ -33,6 +36,7 @@
   /* opacity: 0px; */
   display: flex;
   gap: 10;
+  max-width: 1200px;
 
 }
 
@@ -374,9 +378,9 @@ text-decoration-skip-ink: none;
 }
 
 .splitSofaRoot {
-
+/* justify-content: center; */
   width: 100%;
-
+/* display: flex; */
 }
 }
 
