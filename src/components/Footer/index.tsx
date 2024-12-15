@@ -27,8 +27,12 @@ export default function Footer() {
             <Link href="/">    <li>Nano-coating</li></Link>
             <Link href="/fitouts">    <li>Fit-outs</li></Link>
             <Link href="/aboutus">   <li>About us</li></Link>
-            <Link href="/">    <li>FAQs</li></Link>
-            <Link href="/">  <li>Testimonials</li></Link>
+            {/* <Link href="/">     */}
+            <li>FAQs</li>
+            {/* </Link> */}
+            {/* <Link href="/">   */}
+            <li>Testimonials</li>
+            {/* </Link> */}
         
       
             
@@ -60,7 +64,7 @@ export default function Footer() {
           <div
             style={{ border: "0.5px solid #DEDDDD", margin: "1rem 0rem" }}
           ></div>
-          <p>+971-568384466</p>
+          <p>+971-581364466</p>
         </div>
       </div>
 
@@ -68,14 +72,19 @@ export default function Footer() {
       <div 
       className={`${styles.bottomSection} font-lato`}>
         <div className={styles.bottomSectionTextholder}>
-          <p>Qudee maintenance & fitouts LLC 2024 ©</p>
+          <p>Qudee maintenance & fitouts LLC 2024-2025 ©</p>
           <p>All rights reserved</p>
         </div>
+    
         <div className={styles.socialIcons}>
-          <FaInstagram />
-          <FaFacebook />
-          <FaEnvelope />
-        </div>
+  <a href="https://www.instagram.com/qudeeservices/" target="_blank" rel="noopener noreferrer">
+    <FaInstagram />
+  </a>
+   {/* <FaFacebook /> */}
+  <a href="mailto:mail@qudee.ae">
+    <FaEnvelope />
+  </a>
+</div>
       </div>
     </footer>
   );

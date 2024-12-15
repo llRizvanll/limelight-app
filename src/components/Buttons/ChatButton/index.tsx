@@ -5,11 +5,12 @@ import styles from './ChatButton.module.css';
 interface IProps {
   color: string;
   bgColor?: string;
-  hoverolor?:string
+  hoverolor?:string;
+  number?:string;
 }
 
-const ChatButton = ({ color, bgColor, hoverolor }: IProps) => {
-  const whatsappNumber = '11234567890';
+const ChatButton = ({ color, bgColor, hoverolor , number }: IProps) => {
+  const whatsappNumber = number;
 
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 

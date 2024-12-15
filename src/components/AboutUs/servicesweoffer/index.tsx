@@ -14,19 +14,21 @@ const ServiceOfferSection = () => {
             imageSrc: "/offer1.svg",
             imageSrcWeb: "/offer2web.svg",
             stepNumber: 1,
-            title: "Interior design",
+            title: "Nano-coating service",
             description:
-                "Our interior designers bring an eye for detail and a passion for creating inspiring spaces. We offer personalized designs tailored to your style, whether modern, contemporary, or traditional.",
+                "Long-lasting protection for your furniture and surfaces. Our advanced nano-coating technology shields against spills, stains, and wear, preserving the beauty of your interiors for years to come.",
             showArrow: true,
+            link:"/"
         },
         {
             imageSrc: "/Layer_2.svg",
             imageSrcWeb: "/offer1web.svg",
             stepNumber: 2,
-            title: "Space Planning",
+            title: "Fit-out services",
             description:
-                "We prioritize maximizing your space's functionality and efficiency. Our experts excel in planning, considering traffic flow, furniture placement, and lighting to create practical, visually appealing spaces.",
+                "Transform your spaces with precision and elegance. From concept to completion, we deliver bespoke fit-out solutions that combine functionality, style, and impeccable craftsmanship.",
             showArrow: true,
+             link:"/"
         },
     
     ];
@@ -56,6 +58,7 @@ const ServiceOfferSection = () => {
         showArrow={step.showArrow}
         imageSrc={step?.imageSrc}
         imageSrcWeb={step?.imageSrcWeb}
+        link={step?.link}
       />
     ))}
 </div>

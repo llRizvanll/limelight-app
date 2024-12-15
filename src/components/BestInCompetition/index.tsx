@@ -1,6 +1,7 @@
 "use client";
 import styles from "./BestInCompetition.module.css";
 import DoneIcon from '@mui/icons-material/Done';
+import CloseIcon from '@mui/icons-material/Close';
 const BestInCompetition = () => {
   // background: #3B3A37;
 
@@ -41,12 +42,12 @@ const BestInCompetition = () => {
       <div className={styles.row}>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Eco-friendly coating solution</div>
         <div className={`${styles.cell} text-[#3B3A37]`}><DoneIcon /></div>
-        <div className={`${styles.cell} font-normal text-[#3B3A37]`}>–</div>
+        <div className={`${styles.cell} font-normal text-[#3B3A37]`}><CloseIcon /></div>
       </div>
       <div className={styles.row}>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Odourless</div>
         <div className={`${styles.cell}  text-[#3B3A37]`}><DoneIcon /></div>
-        <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Not at all</div>
+        <div className={`${styles.cell} font-normal text-[#3B3A37]`}><CloseIcon /></div>
       </div>
       <div className={styles.row}>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Antimicrobial</div>
@@ -63,14 +64,14 @@ const BestInCompetition = () => {
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>
           Each member of our fleet is a trained professional and well-versed with mannerism
         </div>
-        <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Maybe, maybe not</div>
+        <div className={`${styles.cell} font-normal text-[#3B3A37]`}><CloseIcon /></div>
       </div>
       <div className={styles.row}>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Cost effectiveness</div>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>
           Services starting for as low as 99 AED
         </div>
-        <div className={styles.cell}>Expensive</div>
+        <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Expensive</div>
       </div>
     </div>
   </div>

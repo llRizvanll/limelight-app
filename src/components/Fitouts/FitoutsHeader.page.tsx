@@ -10,7 +10,7 @@ import Modal from "react-modal";
 
 
 const FitoutHeader = () => {
-  const tabs = ["+971-581364466", "MAIL@QUDEE.AE"];
+  const tabs = ["+971-524349169", "MAIL@QUDEE.AE"];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -76,7 +76,14 @@ const FitoutHeader = () => {
     closeButton.addEventListener("click", cleanup);
     document.addEventListener("keydown", handleKeyPress);
   };
+  const handleEmailClick = () => {
+    console.log("maill");
+    window.location.href = "mailto:mail@qudee.ae";
+  };
   
+  const handlePhoneClick = () => {
+    window.location.href = "tel:+971-524349169";
+  };
   
   return (
     <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
@@ -107,7 +114,7 @@ const FitoutHeader = () => {
         >
           {tabs.map((tab) => (
 
-            <div key={tab} className=" flex relative w-[191px] px-4 py-2 mx-1 cursor-pointer text-[#010FAD] bg-[#ebecfc] font-lato text-sm font-normal text-center border-none">
+            <div onClick={tab.includes("@") ? handleEmailClick :  handlePhoneClick} key={tab} className=" flex relative w-[191px] px-4 py-2 mx-1 cursor-pointer text-[#010FAD] bg-[#ebecfc] font-lato text-sm font-normal text-center border-none">
                 {/* Icon Condition */}
           <div className="mr-2">
             {tab.includes("@") ? (

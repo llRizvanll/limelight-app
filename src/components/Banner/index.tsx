@@ -113,7 +113,7 @@ const Banner = () => {
             furniture and interiors for the long term.
           </p>
           <div className={styles.chatBtn}>
-            <ChatButton color="text-white" />
+            <ChatButton  number="+971-581364466" color="text-white" />
           </div>
         </div>
         {/* <div className={styles.qoutecontainer}>
