@@ -29,7 +29,8 @@ export default function Footer() {
             <Link href="/fitouts">    <li>Fit-outs</li></Link>
             <Link href="/aboutus">   <li>About us</li></Link>
             {/* <Link href="/">     */}
-            <li>FAQs</li>
+            {/* <li>FAQs</li> */}
+            <Link href="#faq-section">   <li>FAQs</li></Link>
             {/* </Link> */}
             {/* <Link href="/">   */}
             <li>Testimonials</li>

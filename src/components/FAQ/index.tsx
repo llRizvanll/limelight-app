@@ -15,42 +15,52 @@ const FAQs = () => {
     },
     {
       question: "Can nano-coating be applied to all types of furniture?",
-      answer: "Yes, our nano-coating solutions are versatile and can be applied to a wide range of surfaces, including fabric, leather, wood, and glass. During your consultation, we assess which surfaces are best suited for coating.",
+      answer:
+        "Yes, our nano-coating solutions are versatile and can be applied to a wide range of surfaces, including fabric, leather, wood, and glass. During your consultation, we assess which surfaces are best suited for coating.",
     },
     {
       question: "Will nano-coating affect the look or feel of my furniture?",
-      answer: "No, nano-coating is transparent and does not alter the appearance or texture of your furniture. It enhances durability without compromising comfort or aesthetics.",
+      answer:
+        "No, nano-coating is transparent and does not alter the appearance or texture of your furniture. It enhances durability without compromising comfort or aesthetics.",
     },
     {
       question:
         "How does nano-coating compare to traditional protective sprays?",
-      answer: "Unlike traditional sprays, nano-coating forms a stronger, long-lasting bond with surfaces, providing superior resistance to stains and damage. It requires fewer reapplications and offers more comprehensive protection.",
+      answer:
+        "Unlike traditional sprays, nano-coating forms a stronger, long-lasting bond with surfaces, providing superior resistance to stains and damage. It requires fewer reapplications and offers more comprehensive protection.",
     },
     {
       question: "Is nano-coating safe for children and pets?",
-      answer: "Yes, our nano-coating solutions are safe, non-toxic, and eco-friendly, making them ideal for households with children and pets.",
+      answer:
+        "Yes, our nano-coating solutions are safe, non-toxic, and eco-friendly, making them ideal for households with children and pets.",
     },
     {
       question: "How much does nano-coating cost?",
-      answer: "The cost of nano-coating varies based on the type and size of the surfaces being treated. For a custom quote, we recommend scheduling a consultation where we can discuss your specific needs.",
+      answer:
+        "The cost of nano-coating varies based on the type and size of the surfaces being treated. For a custom quote, we recommend scheduling a consultation where we can discuss your specific needs.",
     },
     {
       question: "Can I remove nano-coating if I change my mind?",
-      answer: "Nano-coating is designed to be durable but not permanent. If needed, surfaces can be professionally stripped and recoated or left to gradually wear off over time.",
+      answer:
+        "Nano-coating is designed to be durable but not permanent. If needed, surfaces can be professionally stripped and recoated or left to gradually wear off over time.",
     },
     {
       question: "Does nano-coating require special maintenance?",
-      answer: "Nano-coated surfaces require less frequent cleaning, as they resist stains and dust accumulation. For best results, we’ll provide maintenance guidelines specific to each coated surface.",
+      answer:
+        "Nano-coated surfaces require less frequent cleaning, as they resist stains and dust accumulation. For best results, we’ll provide maintenance guidelines specific to each coated surface.",
     },
   ];
 
-  const toggleAnswer = (index:any) => {
+  const toggleAnswer = (index: any) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
     <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
-      <div className={`${styles.container} '!pt-[88px] !mt-[88px] border-t border-[#66656333] w-full'`}>
+      <div
+        id="faq-section"
+        className={`${styles.container} '!pt-[88px] !mt-[88px] border-t border-[#66656333] w-full'`}
+      >
         <h2 className={styles.heading}>Frequently asked questions</h2>
         <div className={styles.faqList}>
           {faqs.map((faq, index) => (
