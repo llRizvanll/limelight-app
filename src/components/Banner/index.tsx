@@ -7,6 +7,7 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { FaPlay } from "react-icons/fa";
 // import Modal from "react-modal";
 import Modal from "react-modal";
+import { Constants } from "@/commonFunctions/Constants";
 Modal.setAppElement("#__next");
 
 
@@ -32,7 +33,7 @@ const Banner = () => {
   const playFullscreenVideo = () => {
     // Create video element
     const videoElement = document.createElement("video");
-    videoElement.src = "./screen.mp4";
+    videoElement.src = Constants.VID_FILE;
     videoElement.controls = true;
     videoElement.autoplay = true;
     videoElement.style.position = "fixed";
@@ -127,7 +128,7 @@ const Banner = () => {
     >
       </div>
       <div className="flex flex-col mt-[-7.5rem] md:flex-row lg:flex-row justify-between w-full bg-white z-[1] gap-[8px]">
-        <img src="./frame.png" className="md:w-[33%] lg:w-[33%]" />
+        <img src={Constants.HERO_IMAGE_LEFT} className="md:w-[33%] lg:w-[33%]" />
 
         {/* Video Thumbnail with Play Button */}
         <div
@@ -135,7 +136,7 @@ const Banner = () => {
           onClick={playFullscreenVideo}
         >
           <video
-            src="./screen.mp4"
+            src={Constants.VID_FILE}
             muted
             loop
             className={styles.videoPreview}
@@ -143,7 +144,7 @@ const Banner = () => {
           <img src="./playBtn.svg" alt="Play" className={styles.playButton} />
         </div>
 
-        <img src="./frame2.png" className="md:w-[33%] lg:w-[33%]" />
+        <img src={Constants.HERO_IMAGE_RIGHT} className="md:w-[33%] lg:w-[33%]" />
 
         {/* Modal with Fullscreen Video */}
         <Modal
