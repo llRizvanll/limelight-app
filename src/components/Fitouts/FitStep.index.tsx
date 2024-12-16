@@ -95,7 +95,6 @@ const FitSteps = () => {
 
 
 
-
             </div>
 
         </div>

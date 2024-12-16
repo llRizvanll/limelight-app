@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./offer.module.css";
 import useScreenType from "@/commonFunctions/useWindowSize";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import Link from "next/link";
 
 interface FitStepCardProps {
   stepNumber: number;
@@ -11,6 +12,7 @@ interface FitStepCardProps {
   nextLine?: boolean; // Indicates if this card should use stepCard3
   imageSrc?:string;
   imageSrcWeb?:string;
+  link?:string
 }
 
 const ServiceOfferCard: React.FC<FitStepCardProps> = ({
@@ -20,7 +22,8 @@ const ServiceOfferCard: React.FC<FitStepCardProps> = ({
   showArrow = false,
   nextLine = false,
   imageSrc,
-  imageSrcWeb
+  imageSrcWeb,
+  link ="/"
 }) => {
   const screenType = useScreenType();
   const isMobile = screenType === "MOBILE";
@@ -36,10 +39,15 @@ const ServiceOfferCard: React.FC<FitStepCardProps> = ({
       <div className={styles.textContainer2}>
       <h4 className={styles.stepTitle}>{title}</h4>
       <p className={styles.stepDesc}>{description}</p>
+      <Link href={link}>   
          <div className={styles.qoutecontainer}>
-          <p className={styles.get_your_qoute}>Go to nano-coating service</p>
-          <HiOutlineArrowNarrowRight size={30} color="#010fad" />
+       
+                <p className={styles.get_your_qoute}>Go to nano-coating service</p>  <HiOutlineArrowNarrowRight size={30} color="#010fad" />
+          
+
+         
         </div>
+        </Link>
       </div>
     </div>
   );

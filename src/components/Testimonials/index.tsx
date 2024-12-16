@@ -125,7 +125,7 @@ const fitouts = true
           Make your furnishing stain resistant and long lasting. See the
           difference everyday.
         </h3>
-        <ChatButton color="text-custom-blue" hoverolor='hover:bg-light-silver' bgColor="bg-light-silver" />
+        <ChatButton number="+971-581364466" color="text-custom-blue" hoverolor='hover:bg-light-silver' bgColor="bg-light-silver" />
       </div>}
 
 
@@ -142,51 +142,51 @@ export default Testimonials;
 
 export const testimonialsData = [
   {
-    name: "Don Draper",
-    location: "Palm Jumeirah, Dubai",
-    image: "/user.svg",
-    title: `“Absolutely Immaculate and professional service.”`,
+    name: "Yousef Imtiyaz",
+    location: "Palm Jumerah, Dubai",
+    image: "/image.svg",
+    title: `“Practical and worth every Dirham!”`,
     review:
-      `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
+      `“Qudee's nano-coating has been a game-changer for my home. My furniture now stays spotless and protected, making maintenance effortless and preserving its elegance.“`,
   },
   {
-    name: "Peggy Olson",
-    location: "Bur Dubai, Dubai",
-    image: "/user.svg",
-    title: `“Absolutely Immaculate and professional service”`,
+    name: "Mohammed Rizzath",
+    location: "Al Nahda, Sharjah",
+    image: "/image-1.svg",
+    title: `“Gave my interiors and polished look.”`,
     review:
-      `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
+      `“Thanks to Qudee’s nano-coating service, my interiors look flawless and stay that way even with heavy use. It’s the best decision I’ve made to keep my space looking pristine.“`,
   },
   {
-    name: "Peggy Olson",
-    location: "Bur Dubai, Dubai",
-    image: "/user.svg",
-    title: `“Absolutely Immaculate and professional service”`,
+    name: "Ziad Dardary",
+    location: "Yas Island, Abu Dhabi",
+    image: "/image-1.svg",
+    title: `“Every detail was handled with professionalism.”`,
     review:
-      `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
+      `“The attention to detail in Qudee’s fit-out services is unmatched. Every element of my office space reflects style and sophistication, making it a pleasure to work in.“`,
   },
   {
-    name: "Peggy Olson",
-    location: "Bur Dubai, Dubai",
-    image: "/user.svg",
-    title: `“Absolutely Immaculate and professional service”`,
+    name: "Dalia Bahii",
+    location: "Derra, Dubai",
+    image: "/image-3.svg",
+    title: `“My villa’s fit-out is now a masterpiece.”`,
     review:
-      `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
+      `“From start to finish, the Qudee team was professional and meticulous. The fit-out for my villa is not only functional but also stunningly designed—it’s become the centerpiece of my home.“`,
   },
   {
-    name: "Peggy Olson",
+    name: "Mohamed Marfin",
     location: "Bur Dubai, Dubai",
-    image: "/user.svg",
-    title: `“Absolutely Immaculate and professional service”`,
+    image: "/image-2.svg",
+    title: `“Design blends functionality and Luxury perfectly.”`,
     review:
-      `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
+      `“Qudee transformed my apartment with their expert fit-out services. The design blends functionality and luxury perfectly, creating a space that feels both practical and sophisticated.“`,
   },
-  {
-    name: "Peggy Olson",
-    location: "Bur Dubai, Dubai",
-    image: "/user.svg",
-    title: `“Absolutely Immaculate and professional service”`,
-    review:
-      `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
-  },
+  // {
+  //   name: "Peggy Olson",
+  //   location: "Bur Dubai, Dubai",
+  //   image: "/user.svg",
+  //   title: `“Absolutely Immaculate and professional service”`,
+  //   review:
+  //     `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.“`,
+  // },
 ];

@@ -7,6 +7,15 @@ import styles from "./contactCard.module.css";
 
 export default function AboutBottomSection() {
 
+    const handleEmailClick = () => {
+        console.log("maill");
+        window.location.href = "mailto:mail@qudee.ae";
+      };
+      
+      const handlePhoneClick = () => {
+        window.location.href = "tel:+971-581364466";
+      };
+
     const tabs = ["+971-581364466", "MAIL@QUDEE.AE"];
     return (
         <div className={`${styles.root} 'mx-2 2xl:mx-32'`}>
@@ -19,7 +28,7 @@ export default function AboutBottomSection() {
                     <h3>
                     Turn your home space desires in to a reality, get in touch.
                     </h3>
-                    <ChatButton color="text-custom-blue" hoverolor='hover:bg-light-silver' bgColor="bg-light-silver" />
+                    <ChatButton number="+971-581364466" color="text-custom-blue" hoverolor='hover:bg-light-silver' bgColor="bg-light-silver" />
                 </div>
 
                 {/* <div className={styles.splitSofaBottomCard}> */}
@@ -33,11 +42,14 @@ export default function AboutBottomSection() {
         >
           {tabs.map((tab) => (
 
-            <div key={tab} className=" flex relative w-[191px] px-4 py-2 mx-1 cursor-pointer text-[#010FAD] bg-[#ebecfc] font-lato text-sm font-normal text-center border-none">
+            <div onClick={tab.includes("@") ? handleEmailClick:  handlePhoneClick} key={tab} className=" flex relative w-[191px] px-4 py-2 mx-1 cursor-pointer text-[#010FAD] bg-[#ebecfc] font-lato text-sm font-normal text-center border-none">
                 {/* Icon Condition */}
           <div className="mr-2">
             {tab.includes("@") ? (
+ 
               <img src="./mail.svg" className="text-[#010FAD] text-lg w-[24px] h-[24px]" />
+           
+        
               
             ) : (
               <img src="./call.svg" className="text-[#010FAD] text-lg w-[24px] h-[24px]" />
@@ -56,7 +68,7 @@ export default function AboutBottomSection() {
    
      </div>
           </div>
-                {/* </div> */}
+ 
         
 
 

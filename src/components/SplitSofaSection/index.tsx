@@ -32,7 +32,7 @@ export default function SplitSofaSection() {
           Make your furnishing stain resistant and long lasting. See the
           difference everyday.
         </h3>
-        <ChatButton color="text-custom-blue" hoverolor='hover:bg-light-silver' bgColor="bg-light-silver" />
+        <ChatButton  number="+971-581364466" color="text-custom-blue" hoverolor='hover:bg-light-silver' bgColor="bg-light-silver" />
       </div>
 
 

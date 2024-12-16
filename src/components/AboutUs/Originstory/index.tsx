@@ -26,8 +26,9 @@ const OriginStorySection = () => {
 
                     <div className={`${styles.indicators}`}>
                     <p>
-                    Quedee Services is more than a brand—it’s a legacy. Founded on the principles instilled by its patriarch, an architect who envisioned a future where design could be both timeless and transformative, Quedee has been shaped over three generations into a trusted leader in the industry. What began with SDA Designs, crafting iconic spaces across India and the UAE, has grown into Quedee Services, a company founded to push the boundaries of home and business care.
-                    With a focus on innovation, Quedee is setting a new standard in the GCC through advanced nano-coating solutions, protecting and preserving interiors and furniture for years to come. In partnership with Vetro Power, Quedee aims to evolve from high-quality fit-outs to full-spectrum home care, offering solutions like deep cleaning and exterior protection. Anchored in heritage, yet looking to the future, Quedee Services brings an unparalleled commitment to enhancing the spaces where people live, work, and thrive.
+                    Qudee Services is more than a brand—it’s a legacy. Founded on the principles instilled by its patriarch, an architect who envisioned a future where design could be both timeless and transformative, Qudee has been shaped over three generations into a trusted leader in the industry. What began with SDA Designs, crafting iconic spaces across India and the UAE, has grown into Qudee Services, a company founded to push the boundaries of home and business care.
+                    <br />
+                    With a focus on innovation, Qudee is setting a new standard in the GCC through advanced nano-coating solutions, protecting and preserving interiors and furniture for years to come. In partnership with Vetro Power, Qudee aims to evolve from high-quality fit-outs to full-spectrum home care, offering solutions like exterior protection. Anchored in heritage, yet looking to the future, Qudee Services brings an unparalleled commitment to enhancing the spaces where people live, work, and thrive.
                             </p>
                         {/* <div className={styles.indicators}>
 
