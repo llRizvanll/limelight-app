@@ -10,9 +10,10 @@ interface FitStepCardProps {
   description: string;
   showArrow?: boolean;
   nextLine?: boolean; // Indicates if this card should use stepCard3
-  imageSrc?:string;
-  imageSrcWeb?:string;
-  link?:string
+  imageSrc?: string;
+  imageSrcWeb?: string;
+  link?: string;
+  actionBtnTitle?: string;
 }
 
 const ServiceOfferCard: React.FC<FitStepCardProps> = ({
@@ -23,30 +24,30 @@ const ServiceOfferCard: React.FC<FitStepCardProps> = ({
   nextLine = false,
   imageSrc,
   imageSrcWeb,
-  link ="/"
+  link = "/",
+  actionBtnTitle ,
 }) => {
   const screenType = useScreenType();
   const isMobile = screenType === "MOBILE";
 
-
-
   return (
     <div className={styles.stepCard}>
-            <div className={styles.imageContainer}>
-        <img src={ isMobile ? imageSrc : imageSrcWeb} alt={"offerCard"} className={styles.image} />
+      <div className={styles.imageContainer}>
+        <img
+          src={isMobile ? imageSrc : imageSrcWeb}
+          alt={"offerCard"}
+          className={styles.image}
+        />
       </div>
       {/* <div className={styles.stepCountShower}>{stepNumber}</div> */}
       <div className={styles.textContainer2}>
-      <h4 className={styles.stepTitle}>{title}</h4>
-      <p className={styles.stepDesc}>{description}</p>
-      <Link href={link}>   
-         <div className={styles.qoutecontainer}>
-       
-                <p className={styles.get_your_qoute}>Go to nano-coating service</p>  <HiOutlineArrowNarrowRight size={30} color="#010fad" />
-          
-
-         
-        </div>
+        <h4 className={styles.stepTitle}>{title}</h4>
+        <p className={styles.stepDesc}>{description}</p>
+        <Link href={link}>
+          <div className={styles.qoutecontainer}>
+            <p className={styles.get_your_qoute}>{actionBtnTitle}</p>{" "}
+            <HiOutlineArrowNarrowRight size={30} color="#010fad" />
+          </div>
         </Link>
       </div>
     </div>

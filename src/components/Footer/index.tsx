@@ -3,6 +3,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import styles from "./Footer.module.css";
 import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
+import { Constants } from "@/commonFunctions/Constants";
 
 export default function Footer() {
   return (
@@ -28,7 +29,8 @@ export default function Footer() {
             <Link href="/fitouts">    <li>Fit-outs</li></Link>
             <Link href="/aboutus">   <li>About us</li></Link>
             {/* <Link href="/">     */}
-            <li>FAQs</li>
+            {/* <li>FAQs</li> */}
+            <Link href="#faq-section">   <li>FAQs</li></Link>
             {/* </Link> */}
             {/* <Link href="/">   */}
             <li>Testimonials</li>
@@ -41,14 +43,14 @@ export default function Footer() {
              
             </ul>
           </div>
-          <div className={styles.column}>
+          {/* <div className={styles.column}>
             <h3>Support</h3>
             <ul>
               <li>Contact us</li>
               <li>Terms of service</li>
               <li>Legal</li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Contact Section */}
@@ -81,7 +83,7 @@ export default function Footer() {
     <FaInstagram />
   </a>
    {/* <FaFacebook /> */}
-  <a href="mailto:mail@qudee.ae">
+  <a href={Constants.MAIL_TO_}>
     <FaEnvelope />
   </a>
 </div>

@@ -4,13 +4,14 @@ import React, { useState } from "react";
 import styles from "./Fitouts.module.css";
 import ChatButton from "../Buttons/ChatButton";
 import Modal from "react-modal";
+import { Constants } from "@/commonFunctions/Constants";
 // Modal.setAppElement("#__next");
 
 
 
 
 const FitoutHeader = () => {
-  const tabs = ["+971-524349169", "MAIL@QUDEE.AE"];
+  const tabs = ["+971-524349169", Constants.EMAIL_ID];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -29,7 +30,7 @@ const FitoutHeader = () => {
   const playFullscreenVideo = () => {
     // Create video element
     const videoElement = document.createElement("video");
-    videoElement.src = "./screen.mp4";
+    videoElement.src = Constants.VID_FILE;
     videoElement.controls = true;
     videoElement.autoplay = true;
     videoElement.style.position = "fixed";
@@ -78,7 +79,7 @@ const FitoutHeader = () => {
   };
   const handleEmailClick = () => {
     console.log("maill");
-    window.location.href = "mailto:mail@qudee.ae";
+    window.location.href = Constants.MAIL_TO_;
   };
   
   const handlePhoneClick = () => {
