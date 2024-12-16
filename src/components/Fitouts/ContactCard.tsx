@@ -1,12 +1,13 @@
 "use client";
+import { Constants } from "@/commonFunctions/Constants";
 import ChatButton from "../Buttons/ChatButton";
 // import styles from "../SplitSofaSection/SplitSofaSection.module.css";
 import styles from "./Fitouts.module.css";
 export default function FitoutBottomSection() {
-    const tabs = ["+971-524349169", "MAIL@QUDEE.AE"];
+    const tabs = ["+971-524349169", Constants.EMAIL_ID];
     const handleEmailClick = () => {
         // console.log("maill");
-        window.location.href = "mailto:mail@qudee.ae";
+        window.location.href = Constants.MAIL_TO_;
       };
       
       const handlePhoneClick = () => {

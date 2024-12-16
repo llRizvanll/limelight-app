@@ -11,7 +11,7 @@ import { Constants } from "@/commonFunctions/Constants";
 
 
 const FitoutHeader = () => {
-  const tabs = ["+971-524349169", "MAIL@QUDEE.AE"];
+  const tabs = ["+971-524349169", Constants.EMAIL_ID];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -79,7 +79,7 @@ const FitoutHeader = () => {
   };
   const handleEmailClick = () => {
     console.log("maill");
-    window.location.href = "mailto:mail@qudee.ae";
+    window.location.href = Constants.MAIL_TO_;
   };
   
   const handlePhoneClick = () => {
