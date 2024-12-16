@@ -134,6 +134,8 @@ margin-top: 88px;
   /* margin-top: 60px; */
   display: flex;
   background: #F4F4F5;
+  min-height: 428px;
+
 
 }
 
@@ -146,7 +148,7 @@ height: "428px", */
 .image {
   width: 272px;
   height: 428px;
-  object-fit: cover,
+  object-fit: contain,
 }
 
 .livingSpace {
