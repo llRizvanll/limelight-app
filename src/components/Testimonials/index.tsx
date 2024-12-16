@@ -152,7 +152,7 @@ export const testimonialsData = [
   {
     name: "Mohammed Rizzath",
     location: "Al Nahda, Sharjah",
-    image: "/image-1.svg",
+    image: "/image-4.svg",
     title: `“Gave my interiors and polished look.”`,
     review:
       `“Thanks to Qudee’s nano-coating service, my interiors look flawless and stay that way even with heavy use. It’s the best decision I’ve made to keep my space looking pristine.“`,
