@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styles from "./Fitouts.module.css";
 import ChatButton from "../Buttons/ChatButton";
 import Modal from "react-modal";
+import { Constants } from "@/commonFunctions/Constants";
 // Modal.setAppElement("#__next");
 
 
@@ -29,7 +30,7 @@ const FitoutHeader = () => {
   const playFullscreenVideo = () => {
     // Create video element
     const videoElement = document.createElement("video");
-    videoElement.src = "./screen.mp4";
+    videoElement.src = Constants.VID_FILE;
     videoElement.controls = true;
     videoElement.autoplay = true;
     videoElement.style.position = "fixed";

@@ -41,14 +41,14 @@ export default function Footer() {
              
             </ul>
           </div>
-          <div className={styles.column}>
+          {/* <div className={styles.column}>
             <h3>Support</h3>
             <ul>
               <li>Contact us</li>
               <li>Terms of service</li>
               <li>Legal</li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Contact Section */}
