@@ -40,7 +40,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #3b3a37;
-  width: 45%;
+  width: 100%;
   padding-top: 72px;     
   padding-bottom: 72px;  
   padding-left: 46px;    
@@ -63,12 +63,20 @@
 
 .indicatorsContainer {
   display: flex;
-  /* justify-content: space-between; */
-  gap: 44px;
+  justify-content: space-between; /* Distribute indicators */
+  margin-top: 20px;
+  width: 100%; /* Ensure the container takes full width */
+  padding: 0 40px; /* Add padding to control spacing */
 }
 
 .indicators {
-width: 177px;
+text-align: left;
+flex:1
+}
+
+.indicators p {
+  width: 100%; /* Make the <p> elements take up the full width */
+  display: block; /* Ensure the <p> elements are block elements */
 }
 .indicators h3 {
   font-family: Lato;
@@ -80,6 +88,7 @@ width: 177px;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #3b3a37;
+  
   /* min-width: 177px; */
 }
 .indicators p {
@@ -92,6 +101,10 @@ width: 177px;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #666563;
+}
+
+.indicators:last-child {
+  text-align: right; /* Align the last indicator to the right */
 }
 
 @media (max-width: 1640px) {
