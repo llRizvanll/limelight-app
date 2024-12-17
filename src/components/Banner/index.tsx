@@ -196,7 +196,7 @@ const Banner = () => {
 
           {/* Fullscreen Video */}
           <video
-            src="./screen.mp4"
+            src={Constants.VID_FILE}
             controls
             autoPlay={isVideoPlaying} // Autoplay only when modal is open
             className={styles.modalVideo}

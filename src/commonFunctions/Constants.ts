@@ -1,5 +1,6 @@
 export const Constants = {
-    VID_FILE: "./qudee_video.mp4",
+    CHROME_VID_FILE: "./qudee_video.mp4",
+    VID_FILE: "./qudee-video.MOV",
     HERO_IMAGE_LEFT:"./hero_img_left.svg",
     HERO_IMAGE_RIGHT:"./hero_img_right.svg",
     WHATSAPP_NUMBER:"+971-581364466", 
