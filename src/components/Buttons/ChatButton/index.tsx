@@ -13,18 +13,17 @@ interface IProps {
 const ChatButton = ({ color, bgColor, hoverolor, number }: IProps) => {
   const whatsappNumber = number;
 
-  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+  // const whatsappLink = `https://wa.me/${whatsappNumber}`;
+  const whatsAppNumberLink = 'https://wa.me/'+Constants.EDITED_WHATSAPP_NUMBER;
 
   const sendMessage = () => {
     let url = 'whatsapp://send?text=Hello&phone='+Constants.WHATSAPP_NUMBER;
     window.open(url, '_blank'); 
   };
 
-  
-
   return (
     <div className={styles.chatButtonContainer}>
-      {/* <a href={whatsappLink} target="_blank" rel="noopener noreferrer"> */}
+      <a href={whatsAppNumberLink} >
         <button
           className={`${styles.chatButton} ${color} ${
             bgColor || "bg-custom-blue"
@@ -32,11 +31,11 @@ const ChatButton = ({ color, bgColor, hoverolor, number }: IProps) => {
           style={{
             backgroundColor: bgColor, // Inline style for bgColor if needed
           }}
-          onClick={sendMessage}
+          // onClick={()=> whatsappLink}
         >
           Chat on WhatsApp
         </button>
-      {/* </a> */}
+      </a>
     </div>
   );
 };
