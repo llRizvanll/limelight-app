@@ -1,5 +1,6 @@
 "use client";
 
+import { Constants } from "@/commonFunctions/Constants";
 import styles from "./ChatButton.module.css";
 
 interface IProps {
@@ -15,7 +16,7 @@ const ChatButton = ({ color, bgColor, hoverolor, number }: IProps) => {
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
   const sendMessage = () => {
-    let url = 'whatsapp://send?text=Hello&phone='+{whatsappNumber};
+    let url = 'whatsapp://send?text=Hello&phone='+Constants.WHATSAPP_NUMBER;
     window.open(url, '_blank'); 
   };
 
