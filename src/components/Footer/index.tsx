@@ -33,7 +33,7 @@ export default function Footer() {
             <Link href="#faq-section">   <li>FAQs</li></Link>
             {/* </Link> */}
             {/* <Link href="/">   */}
-            <li>Testimonials</li>
+            {/* <li>Testimonials</li> */}
             {/* </Link> */}
         
       
@@ -60,8 +60,7 @@ export default function Footer() {
             Reach us at
           </h3>
           <p>
-            Green Tower - Deira - Riggat Al Buteen - Dubai - United Arab
-            Emirates
+          1604 Green Tower, Riggat Al Buteen, Deira, Dubai, United Arab Emirates
           </p>
           <div
             style={{ border: "0.5px solid #DEDDDD", margin: "1rem 0rem" }}

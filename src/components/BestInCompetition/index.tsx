@@ -56,7 +56,7 @@ const BestInCompetition = () => {
       </div>
       <div className={styles.row}>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Long lasting</div>
-        <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Warranty up to 2 years</div>
+        <div className={`${styles.cell} font-normal text-[#3B3A37]`}>Warranty 8 - 12 months based on usage</div>
         <div className={`${styles.cell} font-normal text-[#3B3A37]`}>6 months warranty only</div>
       </div>
       <div className={styles.row}>
