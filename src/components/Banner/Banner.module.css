@@ -300,6 +300,7 @@
   object-fit: cover;
   filter: brightness(30%);
   border: #939391;
+  background-image: url('/thumbnail.jpeg');
 }
 
 .playButton {

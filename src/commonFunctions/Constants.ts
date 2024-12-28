@@ -7,6 +7,7 @@ export const Constants = {
     EDITED_WHATSAPP_NUMBER:"971581364466", 
     EMAIL_ID:"MAIL@QUDEE.AE",
     MAIL_TO_: "mailto:mail@qudee.ae",
+    MAP_LINK: "https://www.google.com/maps/place/Qudee+Services/@25.2579661,55.3218138,21z/data=!4m6!3m5!1s0x8d96233037b8cd07:0x29f746ad97d42c12!8m2!3d25.258044!4d55.321828!16s%2Fg%2F11v3nrcszv?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
 }
 
 export const smoothScroll = (target: HTMLElement, duration: number) => {
