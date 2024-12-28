@@ -33,3 +33,4 @@ export const smoothScroll = (target: HTMLElement, duration: number) => {
 
     requestAnimationFrame(animation);
   };
+  
