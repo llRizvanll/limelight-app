@@ -138,6 +138,7 @@ const Banner = () => {
           <video
             src={Constants.VID_FILE}
             muted
+            autoPlay={false}
             loop
             className={styles.videoPreview}
           ></video>

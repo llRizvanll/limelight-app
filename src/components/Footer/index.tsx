@@ -7,7 +7,7 @@ import { Constants } from "@/commonFunctions/Constants";
 
 export default function Footer() {
   return (
-<footer className={`${styles.footer} font-lato`}>
+    <footer className={`${styles.footer} font-lato`}>
       <div className={styles.container}>
         {/* Logo Section */}
         <div className={styles.logoSection}>
@@ -25,22 +25,28 @@ export default function Footer() {
           <div className={styles.column}>
             <h3>Company</h3>
             <ul>
-            <Link href="/">    <li>Nano-coating</li></Link>
-            <Link href="/fitouts">    <li>Fit-outs</li></Link>
-            <Link href="/aboutus">   <li>About us</li></Link>
-            {/* <Link href="/">     */}
-            {/* <li>FAQs</li> */}
-            <Link href="#faq-section">   <li>FAQs</li></Link>
-            {/* </Link> */}
-            {/* <Link href="/">   */}
-            {/* <li>Testimonials</li> */}
-            {/* </Link> */}
-        
-      
-            
-             
-            
-             
+              <Link href="/">
+                {" "}
+                <li>Nano-coating</li>
+              </Link>
+              <Link href="/fitouts">
+                {" "}
+                <li>Fit-outs</li>
+              </Link>
+              <Link href="/aboutus">
+                {" "}
+                <li>About us</li>
+              </Link>
+              {/* <Link href="/">     */}
+              {/* <li>FAQs</li> */}
+              <Link href="#faq-section">
+                {" "}
+                <li>FAQs</li>
+              </Link>
+              {/* </Link> */}
+              {/* <Link href="/">   */}
+              {/* <li>Testimonials</li> */}
+              {/* </Link> */}
             </ul>
           </div>
           {/* <div className={styles.column}>
@@ -54,13 +60,14 @@ export default function Footer() {
         </div>
 
         {/* Contact Section */}
-        <div className={styles.contactSection}>
+        <div className={styles.contactSection} onClick={() => window.open(Constants.MAP_LINK)}>
           <h3 style={{ display: "flex", gap: "10px" }}>
             <IoLocationSharp size={30} />
             Reach us at
           </h3>
           <p>
-          1604 Green Tower, Riggat Al Buteen, Deira, Dubai, United Arab Emirates
+            1604 Green Tower, Riggat Al Buteen, Deira, Dubai, United Arab
+            Emirates
           </p>
           <div
             style={{ border: "0.5px solid #DEDDDD", margin: "1rem 0rem" }}
@@ -70,22 +77,25 @@ export default function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div 
-      className={`${styles.bottomSection} font-lato`}>
+      <div className={`${styles.bottomSection} font-lato`}>
         <div className={styles.bottomSectionTextholder}>
           <p>Qudee maintenance & fitouts LLC 2024-2025 ©</p>
           <p>All rights reserved</p>
         </div>
-    
+
         <div className={styles.socialIcons}>
-  <a href="https://www.instagram.com/qudeeservices/" target="_blank" rel="noopener noreferrer">
-    <FaInstagram />
-  </a>
-   {/* <FaFacebook /> */}
-  <a href={Constants.MAIL_TO_}>
-    <FaEnvelope />
-  </a>
-</div>
+          <a
+            href="https://www.instagram.com/qudeeservices/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
+          {/* <FaFacebook /> */}
+          <a href={Constants.MAIL_TO_}>
+            <FaEnvelope />
+          </a>
+        </div>
       </div>
     </footer>
   );
