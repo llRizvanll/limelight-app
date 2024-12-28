@@ -5,7 +5,7 @@ import { IoChevronDownSharp } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import { FiMenu, FiX } from "react-icons/fi"; // Import icons from react-icons
-import { SwipeableDrawer } from "@mui/material";
+import { Alert, SwipeableDrawer } from "@mui/material";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { smoothScroll } from "@/commonFunctions/Constants";
@@ -110,8 +110,28 @@ export default function NavBar() {
           className="relative cursor-pointer text-[#3B3A37]"
           onClick={() => {
             const faqSection = document.getElementById("faq-section");
+            console.log("window name " + window.location.pathname);
             if (faqSection) {
-              smoothScroll(faqSection, 1000); // Scroll over 2 seconds
+              if (window.location.pathname === "/") {
+                smoothScroll(faqSection, 1000);
+              } 
+              
+              // else if (window.location.pathname === "/fitouts" || window.location.pathname === "/aboutus") {
+              //   window.screen = faqSection;
+              // }
+        
+              // if (window.location.hash === "#") {
+              //   document.addEventListener('DOMContentLoaded', () => {
+              //     const faqSectionAfterRedirect = document.getElementById("faq-section"); // Get element again after redirect
+              //     if (faqSectionAfterRedirect) {
+              //       setTimeout(() => {
+              //         smoothScroll(faqSectionAfterRedirect, 1000);
+              //       }, 100);
+              //     } else {
+              //       console.error("faq-section element not found after DOMContentLoaded");
+              //     }
+              //   });
+              // }
             }
           }}
         >
